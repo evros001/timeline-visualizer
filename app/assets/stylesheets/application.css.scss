@@ -33,3 +33,10 @@ body {
 .theme-showcase > p > .btn {
   margin: 5px 0;
 }
+
+#map-canvas {
+  height: 500px;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
