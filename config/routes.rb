@@ -1,7 +1,11 @@
 Rails.application.routes.draw do
-  resources :events
+  # resources :events
+  resources :users do
+    resources :events
+  end
 
-  resources :users
+
+  # get '/login', to: 'patients#show'
 
   root "home#index"
 end
