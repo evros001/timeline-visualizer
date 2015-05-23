@@ -1,15 +1,25 @@
 class UsersController < ApplicationController
-  def new
-    @user = User.new
-  end
+    def index
+      @users = User.all
+    end
 
-  def create
-    @user = User.new(params[:user])
-  end
+    def new
+     @user = User.new
+    #  @user = User.find_by(params[:id])
+    end
 
-  def index
-  end
+   def show
+   end
 
-  def login
-  end
+   def create
+     @user = User.create(safe_params)
+    #  binding.pry
+    #  @user = User.find_by(params[:id])
+    #  redirect_to user_path(params[:user_id])
+   end
+
+  private
+   def safe_params
+     params.require(:user).permit(:name, :email)
+   end
 end
