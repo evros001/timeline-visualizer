@@ -6,6 +6,8 @@ class LocationsController < ApplicationController
   end
 
   def show
+    @location = Location.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def new
@@ -13,6 +15,8 @@ class LocationsController < ApplicationController
   end
 
   def edit
+    @location = Location.find(params[:id])
+    @user = User.find(params[:user_id])
   end
 
   def create
@@ -32,12 +36,9 @@ class LocationsController < ApplicationController
     end
   end
 
-
   def update
     respond_to do |format|
-      @user = User.find(params[:user_id])
       if @location.update(strong_params)
-        @user.locations << @location
         format.html { redirect_to user_path(params[:user_id]), notice: 'Location was successfully updated.' }
         format.json { render :show, status: :ok, location: @location }
       else
