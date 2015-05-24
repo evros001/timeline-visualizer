@@ -1,9 +1,15 @@
 <h1>This is a map</h1>
 
-
-
-
+<%= link_to "Create a new event for this user", new_user_event_path(user_id: params[:id]) %>
 
 <div id="map-container">
   <div id="map-canvas"></div>
 </div>
+
+
+<h2>This user's events</h2>
+<ul>
+<% @user.events.each do |event| %>
+  <li><%= event.name %></li>
+<% end %>
+</ul>
