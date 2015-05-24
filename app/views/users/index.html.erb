@@ -3,9 +3,9 @@
 <!-- LIST OF USERS: -->
 <ul>
   <% @users.each do |user| %>
-    <li>name: <%= user.name %> | id: <%= user.id %> |
+    <li>name: <%= user.name %> | id: <%= user.id %> | email: <%= user.email %> |
       <%= link_to "ADD LOCATION FOR #{user.name}", new_user_location_path(user.id) %> |
-      <%= link_to "SEE ALL #{user.name}'s LOCATIONS", user_path(user.id) %> </li>
+      <%= link_to "SEE ALL #{user.name}'s LOCATIONS", user_path(user.id) %><br><br></li>
   <% end %>
 </ul>
 
