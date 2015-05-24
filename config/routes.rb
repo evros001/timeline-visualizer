@@ -1,7 +1,8 @@
 Rails.application.routes.draw do
-  # resources :events
+  resources :locations
+
   resources :users do
-    resources :events
+    resources :locations
   end
 
   root "home#index"

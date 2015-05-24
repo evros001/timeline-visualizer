@@ -1,15 +1,14 @@
-<h1>This is a map</h1>
 
-<%= link_to "Create a new event for this user", new_user_event_path(user_id: params[:id]) %>
+<%= link_to "Create a new event for #{@user.name}", new_user_location_path(user_id: params[:id]) %>
 
-<div id="map-container">
-  <div id="map-canvas"></div>
-</div>
+<!-- LIST OF LOCATIONS/EVENTS FOR THIS USER: -->
+<h2><%= @user.name %>'s LOCATIONS:</h2>
+  <ul>
+    <% @user.locations.each do |location| %>
+      <li><%= location.name %> | <%= location.address %> | <%= location.latitude %> | <%= location.longitude %></li>
+    <% end %>
+  </ul>
 
-
-<h2>This user's events</h2>
-<ul>
-<% @user.events.each do |event| %>
-  <li><%= event.name %></li>
-<% end %>
-</ul>
+<h2><%= @user.name %>'s map:</h2>
+ANOTHER MAP SHOULD BE HERE MAYBE?
+<!-- <div id="container"></div> -->
