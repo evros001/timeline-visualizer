@@ -10,16 +10,6 @@
 </head>
 <body>
 
-
-<!-- FLASH NOTICES -->
-  <% if flash[:error] -%>
-    <p class='error'><%=h flash[:error] %></p>
-  <% end -%>
-
-  <% if flash[:notice] -%>
-    <p class='notice'><%=h flash[:notice] %></p>
-  <% end -%>
-
 <!-- NAVBAR -->
   <nav role="navigation" class="navbar navbar-default">
      <!-- Brand and toggle get grouped for better mobile display -->
@@ -43,6 +33,18 @@
          </ul>
      </div>
   </nav>
+
+
+<!-- FLASH NOTICES -->
+<center>
+  <% if flash[:error] -%>
+    <p class='error'><%=h flash[:error] %></p>
+  <% end -%>
+
+  <% if flash[:notice] -%>
+    <p class='notice'><%=h flash[:notice] %></p>
+  <% end -%>
+</center>
 
 <%= yield %>
 

@@ -1,27 +1,28 @@
 class UsersController < ApplicationController
+  before_action :set_user, only: [:show, :edit, :update, :destroy]
+
     def index
       @users = User.all
     end
 
     def new
      @user = User.new
-    #  @user = User.find_by(params[:id])
     end
 
    def show
-    #  binding.pry
      @user = User.find(params[:id])
    end
 
    def create
      @user = User.create(safe_params)
-    #  binding.pry
-    #  @user = User.find_by(params[:id])
-    #  redirect_to user_path(params[:user_id])
    end
 
   private
+    def set_user
+      @user = User.find(params[:id])
+    end
+
    def safe_params
-     params.require(:user).permit(:name, :email)
+     params.require(:user).permit(:name, :email, :location_id)
    end
 end

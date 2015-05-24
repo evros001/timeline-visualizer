@@ -1,14 +1,22 @@
 
 <%= link_to "Create a new event for #{@user.name}", new_user_location_path(user_id: params[:id]) %>
 
+
 <!-- LIST OF LOCATIONS/EVENTS FOR THIS USER: -->
-<h2><%= @user.name %>'s LOCATIONS:</h2>
+
+<h2><%= @user.name %>'s locations:</h2>
   <ul>
     <% @user.locations.each do |location| %>
-      <li><%= location.name %> | <%= location.address %> | <%= location.latitude %> | <%= location.longitude %></li>
+      <li>
+        <%= location.name %> |
+        <%= location.address %> |
+        <%= location.latitude %> |
+        <%= location.longitude %> |
+        <%= link_to 'edit', edit_user_location_path(@user.id, location.id) %>
+        <br><br>
+        </li>
     <% end %>
   </ul>
 
 <h2><%= @user.name %>'s map:</h2>
 ANOTHER MAP SHOULD BE HERE MAYBE?
-<!-- <div id="container"></div> -->
