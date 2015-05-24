@@ -1,0 +1,66 @@
+class LocationsController < ApplicationController
+  before_action :set_location, only: [:show, :edit, :update, :destroy]
+
+  def index
+    @locations = Location.all
+  end
+
+  def show
+  end
+
+  def new
+    @location = Location.new
+  end
+
+  def edit
+  end
+
+  def create
+    @location = Location.new(strong_params)
+    @user = User.find(params[:user_id])
+    @location.user_id = @user.id
+
+    respond_to do |format|
+      if @location.save
+        @user.locations << @location
+        format.html { redirect_to user_path(params[:user_id]), notice: 'Location was successfully created.' }
+        format.json { render :show, status: :created, location: @location }
+      else
+        format.html { render :new }
+        format.json { render json: @location.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+
+  def update
+    respond_to do |format|
+      @user = User.find(params[:user_id])
+      if @location.update(strong_params)
+        @user.locations << @location
+        format.html { redirect_to user_path(params[:user_id]), notice: 'Location was successfully updated.' }
+        format.json { render :show, status: :ok, location: @location }
+      else
+        format.html { render :edit }
+        format.json { render json: @location.errors, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def destroy
+    @location.destroy
+    respond_to do |format|
+      format.html { redirect_to user_path(params[:user_id]), notice: 'Location was successfully destroyed.' }
+      format.json { head :no_content }
+    end
+  end
+
+  private
+    def set_location
+      @location = Location.find(params[:id])
+    end
+
+    def strong_params
+      params.require(:location).permit(:name, :address, :latitude, :longitude)
+    end
+end
