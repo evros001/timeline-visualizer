@@ -1,12 +1,9 @@
-<h1>All The Users</h1>
+<h1>All the Users:</h1>
 
-<!-- LIST OF USERS: -->
 <ul>
   <% @users.each do |user| %>
-    <li>name: <%= user.name %> | id: <%= user.id %> | email: <%= user.email %> |
-      <%= link_to "ADD LOCATION FOR #{user.name}", new_user_location_path(user.id) %> |
-      <%= link_to "SEE ALL #{user.name}'s LOCATIONS", user_path(user.id) %><br><br></li>
+    <li>ID: <%= user.id %> | Name: <%= user.name.capitalize %> | Email: <%= user.email %> |
+      <%= link_to "ADD LOCATION for #{user.name.capitalize}", new_user_location_path(user.id) %> |
+      <%= link_to "VIEW LOCATIONS for #{user.name.capitalize}", user_path(user.id) %><br><br></li>
   <% end %>
 </ul>
-
-(Technically you should be logged in to be able to add an event but we can fix that later...)
