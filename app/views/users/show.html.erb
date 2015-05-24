@@ -1,6 +1,4 @@
 
-<%= link_to "Create a new event for #{@user.name}", new_user_location_path(user_id: params[:id]) %>
-
 
 <!-- LIST OF LOCATIONS/EVENTS FOR THIS USER: -->
 
@@ -12,11 +10,17 @@
         <%= location.address %> |
         <%= location.latitude %> |
         <%= location.longitude %> |
-        <%= link_to 'edit', edit_user_location_path(@user.id, location.id) %>
+        <%= link_to 'View', user_location_path(@user.id, location.id) %> |
+        <%= link_to 'Edit', edit_user_location_path(@user.id, location.id) %> |
+        <%= link_to "Delete", user_location_path(@user.id, location.id), method: :delete, data: { confirm: 'Are you certain?' } %>
         <br><br>
         </li>
     <% end %>
   </ul>
+
+
+[  <%= link_to "ADD LOCATION for #{@user.name.capitalize}", new_user_location_path(@user.id) %> |
+  <%= link_to "VIEW LOCATIONS for #{@user.name.capitalize}", user_path(@user.id) %> ]
 
 <h2><%= @user.name %>'s map:</h2>
 ANOTHER MAP SHOULD BE HERE MAYBE?
