@@ -1,0 +1,27 @@
+<!--
+THIS URL IS:
+http://localhost:3000/users/1/locations/5 -->
+
+<h1> Maybe at some point we can isolate an event and show it here? </h1>
+
+<h2><%= @user.name.capitalize %>'s <%= @location.name %> Extravaganza!<br><br></h2>
+
+<p>
+  <strong>Name:</strong>
+  <%= @location.name %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @location.address %>
+</p>
+
+<p>
+  <strong>Latitude:</strong>
+  <%= @location.latitude %>
+</p>
+
+<p>
+  <strong>Longitude:</strong>
+  <%= @location.longitude %>
+</p>
