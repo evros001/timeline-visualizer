@@ -12,7 +12,6 @@ class UsersController < ApplicationController
    def show
      @user = User.find(params[:id])
      @markers = @user.markers
-     binding.pry
     #  @markers = [
     #     ['Flatiron School', 40.705329,-74.01397],
     #     ['Brooklyn Museum', 40.671206,-73.963631],
