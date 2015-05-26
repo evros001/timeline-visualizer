@@ -1,0 +1,38 @@
+<h1>Edit Location</h1>
+
+<%= form_for @location, url: user_location_path do |f| %>
+  <% if @location.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
+
+      <ul>
+      <% @location.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+<div class="field">
+  Name your event:<br>
+  <%= f.label :name %><br>
+  <%= f.text_field :name %>
+</div>
+  Enter address or location of event ("Statue of Liberty" or "123 Bob Street, New York, NY 11223"):<br>
+  <div class="field">
+    <%= f.label :address %><br>
+    <%= f.text_field :address %>
+  </div>
+  Enter latitude / longitude (optional):<br>
+  <div class="field">
+    <%= f.label :latitude %><br>
+    <%= f.text_field :latitude %>
+  </div>
+  <div class="field">
+    <%= f.label :longitude %><br>
+    <%= f.text_field :longitude %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
