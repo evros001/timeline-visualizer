@@ -4,7 +4,7 @@ class User < ActiveRecord::Base
   def markers
     arr = Array.new
     locations.each do |location|
-      arr << [location.address, location.latitude, location.longitude] 
+      arr << [location.name, location.latitude, location.longitude] 
     end
     return arr 
   end 
