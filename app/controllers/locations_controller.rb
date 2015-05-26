@@ -36,6 +36,12 @@ class LocationsController < ApplicationController
     end
   end
 
+  def markers
+    @location = Location.new(strong_params)
+    @user = User.find(params[:user_id])
+    binding.pry
+  end 
+
   def update
     respond_to do |format|
       if @location.update(strong_params)
