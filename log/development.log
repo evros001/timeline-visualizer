@@ -44116,3 +44116,584 @@ Processing by UsersController#markers as JSON
   [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 1]]
   Rendered users/markers.json.jbuilder (0.3ms)
 Completed 200 OK in 8ms (Views: 3.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 222ms (Views: 219.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/locations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/scaffolds.self-e786d498ac970f5cc93822daf777b614c21c4d3b84badd568147db9de0bb356a.css?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/application.self-ca374f20fdf7e94cf45543d3c7e2e477fe6655225285ea62502fbe2fd3fdd585.css?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-49100d650983a471242f420a2f71d4dd8a6c69a6edc428d681b9dfee968cfe55.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/insert_map.self-fc340a6a02f60dcd51aa6278bab4f902a1912d17cbc95f1bb40968514a229842.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-c8c6cef5d534d29ac36d3e51d0015b5206ea68ffd953bd6335d567d48ed20499.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-528b9bfca6e2fcf0c89e04259a423626f98ee01d30c7d107b90bc51b9eae5e27.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-caaed30f2e09d6c6b7ff7fb562255db128d86c15d675559af033e7e07a902426.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-0007e3253a4a64868a9a054ddf3d384f51e2b0cb384d9caf3075dff063b7d5b4.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-212c8fd7042f0232c3cf9250d14c24a1817a3426b077935a90053ba5d31788a6.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-59d0352830bf332010f1a0a28c18d873c4864ad7ad07cde3d4a7e577fcabd914.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-6c35000b288bb75bd072d33ccd61cf1d1c9606662379284833d2194218670db0.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-25ae20e1d99b37105bc6f6c8be0dbfc53e9abaf37b9bd1d006371fdaa8ca9f6c.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/locations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+
+
+Started GET "/users/1/markers.json" for 127.0.0.1 at 2015-05-26 16:31:15 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/markers.json.jbuilder (0.8ms)
+Completed 200 OK in 13ms (Views: 8.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-05-26 16:38:10 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 281ms (Views: 277.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:10 -0400
+
+
+Started GET "/assets/locations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:10 -0400
+
+
+Started GET "/assets/scaffolds.self-e786d498ac970f5cc93822daf777b614c21c4d3b84badd568147db9de0bb356a.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:10 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:10 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:10 -0400
+
+
+Started GET "/assets/application.self-ca374f20fdf7e94cf45543d3c7e2e477fe6655225285ea62502fbe2fd3fdd585.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:10 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-49100d650983a471242f420a2f71d4dd8a6c69a6edc428d681b9dfee968cfe55.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-c8c6cef5d534d29ac36d3e51d0015b5206ea68ffd953bd6335d567d48ed20499.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-528b9bfca6e2fcf0c89e04259a423626f98ee01d30c7d107b90bc51b9eae5e27.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/insert_map.self-70da1738929f44d619c17fbdd8ed81fdd5db348a975a9336eaef29aae130704d.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-0007e3253a4a64868a9a054ddf3d384f51e2b0cb384d9caf3075dff063b7d5b4.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-212c8fd7042f0232c3cf9250d14c24a1817a3426b077935a90053ba5d31788a6.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-caaed30f2e09d6c6b7ff7fb562255db128d86c15d675559af033e7e07a902426.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-6c35000b288bb75bd072d33ccd61cf1d1c9606662379284833d2194218670db0.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-59d0352830bf332010f1a0a28c18d873c4864ad7ad07cde3d4a7e577fcabd914.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-25ae20e1d99b37105bc6f6c8be0dbfc53e9abaf37b9bd1d006371fdaa8ca9f6c.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/locations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+
+
+Started GET "/users/1/markers.json" for 127.0.0.1 at 2015-05-26 16:38:11 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mLocation Load (0.2ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 1]]
+  Rendered users/markers.json.jbuilder (0.3ms)
+Completed 200 OK in 10ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 263ms (Views: 260.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/locations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/scaffolds.self-e786d498ac970f5cc93822daf777b614c21c4d3b84badd568147db9de0bb356a.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/application.self-ca374f20fdf7e94cf45543d3c7e2e477fe6655225285ea62502fbe2fd3fdd585.css?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-49100d650983a471242f420a2f71d4dd8a6c69a6edc428d681b9dfee968cfe55.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/insert_map.self-914f1604617ba615510f98b7f6987a872f034845cd3b754b99ffed94dc93e937.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-c8c6cef5d534d29ac36d3e51d0015b5206ea68ffd953bd6335d567d48ed20499.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-caaed30f2e09d6c6b7ff7fb562255db128d86c15d675559af033e7e07a902426.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-528b9bfca6e2fcf0c89e04259a423626f98ee01d30c7d107b90bc51b9eae5e27.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-0007e3253a4a64868a9a054ddf3d384f51e2b0cb384d9caf3075dff063b7d5b4.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-212c8fd7042f0232c3cf9250d14c24a1817a3426b077935a90053ba5d31788a6.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-59d0352830bf332010f1a0a28c18d873c4864ad7ad07cde3d4a7e577fcabd914.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-6c35000b288bb75bd072d33ccd61cf1d1c9606662379284833d2194218670db0.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-25ae20e1d99b37105bc6f6c8be0dbfc53e9abaf37b9bd1d006371fdaa8ca9f6c.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/locations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+
+
+Started GET "/users/1/markers.json" for 127.0.0.1 at 2015-05-26 16:38:24 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/markers.json.jbuilder (0.4ms)
+Completed 200 OK in 14ms (Views: 8.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/locations/new" for 127.0.0.1 at 2015-05-26 16:42:39 -0400
+Processing by LocationsController#new as HTML
+  Parameters: {"user_id"=>"1"}
+  Rendered locations/_form.html.erb (40.4ms)
+  Rendered locations/new.html.erb within layouts/application (43.2ms)
+Completed 200 OK in 257ms (Views: 256.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/insert_map.self-94d01313394fe4aee75cd7dcb655c2d6ff7d3be7b7110bfebf5791a0a63a6c31.js?body=1" for 127.0.0.1 at 2015-05-26 16:42:39 -0400
+
+
+Started POST "/users/1/locations" for 127.0.0.1 at 2015-05-26 16:42:51 -0400
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aDvW8K1okw9g/7ic2qaUNVimGjaefjDAQu6GO+5/FcTG7WZ3P4Rf8EfDzPxMQdxVEL18xUqDr4h3KVM/Ew9eeg==", "location"=>{"name"=>"CHI TOWN", "address"=>"Chicago, IL", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location", "user_id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  INSERT INTO "locations" ("name", "address", "user_id", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)  [["name", "CHI TOWN"], ["address", "Chicago, IL"], ["user_id", 1], ["latitude", 41.8781136], ["longitude", -87.6297982], ["created_at", "2015-05-26 20:42:51.300961"], ["updated_at", "2015-05-26 20:42:51.300961"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "locations" SET "longitude" = ?, "updated_at" = ? WHERE "locations"."id" = ?[0m  [["longitude", -87.6297982], ["updated_at", "2015-05-26 20:42:51.396248"], ["id", 11]]
+  [1m[35m (1.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 213ms (ActiveRecord: 5.6ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2015-05-26 16:42:51 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "1"]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 123ms (Views: 121.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/1/markers.json" for 127.0.0.1 at 2015-05-26 16:42:51 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"1"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 1]]
+  Rendered users/markers.json.jbuilder (0.4ms)
+Completed 200 OK in 8ms (Views: 5.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2015-05-26 16:43:10 -0400
+Processing by UsersController#index as HTML
+  [1m[35mUser Load (0.1ms)[0m  SELECT "users".* FROM "users"
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 136ms (Views: 135.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-05-26 16:43:12 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.3ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 124ms (Views: 121.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/2/markers.json" for 127.0.0.1 at 2015-05-26 16:43:12 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.2ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/markers.json.jbuilder (0.2ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.3ms)
+
+
+Started DELETE "/users/2/locations/7" for 127.0.0.1 at 2015-05-26 16:43:22 -0400
+Processing by LocationsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DuasNb4tvb4znZwGO2suR2FmVgLaS0FJRWwVbjOOX82gMByyLMFxQRSh6GatjGYnKX0w8Q623gFwq8Bqzv4Ucw==", "user_id"=>"2", "id"=>"7"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 7]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  DELETE FROM "locations" WHERE "locations"."id" = ?  [["id", 7]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 4ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-05-26 16:43:22 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 118ms (Views: 115.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2/markers.json" for 127.0.0.1 at 2015-05-26 16:43:22 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 2]]
+  Rendered users/markers.json.jbuilder (0.1ms)
+Completed 200 OK in 5ms (Views: 3.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2/locations/new" for 127.0.0.1 at 2015-05-26 16:43:35 -0400
+Processing by LocationsController#new as HTML
+  Parameters: {"user_id"=>"2"}
+  Rendered locations/_form.html.erb (2.2ms)
+  Rendered locations/new.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 102ms (Views: 101.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users/2/locations" for 127.0.0.1 at 2015-05-26 16:43:43 -0400
+Processing by LocationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"s9kuDS8WZ+vdJGzXG5qSxnyRHf8N8OYY19A2np2IPXwdD56KvfqrFPoYGLeNfdqmNIp7DNkNeVDiF+OaYPh2wg==", "location"=>{"name"=>"My House", "address"=>"76 Maple St, Framingham MA 01702", "latitude"=>"", "longitude"=>""}, "commit"=>"Create Location", "user_id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "locations" ("name", "address", "user_id", "latitude", "longitude", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["name", "My House"], ["address", "76 Maple St, Framingham MA 01702"], ["user_id", 2], ["latitude", 42.29428799999999], ["longitude", -71.431645], ["created_at", "2015-05-26 20:43:43.621946"], ["updated_at", "2015-05-26 20:43:43.621946"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "locations" SET "longitude" = ?, "updated_at" = ? WHERE "locations"."id" = ?  [["longitude", -71.431645], ["updated_at", "2015-05-26 20:43:43.718924"], ["id", 12]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 238ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-05-26 16:43:43 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 102ms (Views: 100.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/markers.json" for 127.0.0.1 at 2015-05-26 16:43:43 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 2]]
+  Rendered users/markers.json.jbuilder (0.2ms)
+Completed 200 OK in 7ms (Views: 4.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2/locations/4/edit" for 127.0.0.1 at 2015-05-26 16:43:56 -0400
+Processing by LocationsController#edit as HTML
+  Parameters: {"user_id"=>"2", "id"=>"4"}
+  [1m[36mLocation Load (0.1ms)[0m  [1mSELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", "4"]]
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered locations/edit.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 108ms (Views: 106.7ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/users/2/locations/4" for 127.0.0.1 at 2015-05-26 16:44:00 -0400
+Processing by LocationsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ht+YI0PEbg+/8I6h2Up5rAWP3QfFYHDiZDRnLne8RAcoCSik0Sii8JjM+sFPrTHMTZS79BGd76pR87IqiswPuQ==", "location"=>{"name"=>"BBQ", "address"=>"Crown Heights, Brooklyn, NY", "latitude"=>"40.6681032", "longitude"=>"-73.9447994"}, "commit"=>"Update Location", "user_id"=>"2", "id"=>"4"}
+  [1m[35mLocation Load (0.2ms)[0m  SELECT  "locations".* FROM "locations" WHERE "locations"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "locations" SET "name" = ?, "longitude" = ?, "updated_at" = ? WHERE "locations"."id" = ?  [["name", "BBQ"], ["longitude", -73.9447994], ["updated_at", "2015-05-26 20:44:00.798394"], ["id", 4]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 147ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-05-26 16:44:00 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 99ms (Views: 97.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/2/markers.json" for 127.0.0.1 at 2015-05-26 16:44:00 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mLocation Load (0.1ms)[0m  SELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?  [["user_id", 2]]
+  Rendered users/markers.json.jbuilder (0.3ms)
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2015-05-26 16:45:41 -0400
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.1ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", "2"]]
+  [1m[36mLocation Load (0.3ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 109ms (Views: 89.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/events.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/locations.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/scaffolds.self-e786d498ac970f5cc93822daf777b614c21c4d3b84badd568147db9de0bb356a.css?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/users.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/application.self-ca374f20fdf7e94cf45543d3c7e2e477fe6655225285ea62502fbe2fd3fdd585.css?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/jquery.self-d03a5518f45df77341bdbe6201ba3bfa547ebba8ed64f0ea56bfa5f96ea7c074.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/jquery_ujs.self-8e98a7a072a6cee1372d19fff9ff3e6aa1e39a37d89d6f06861637d061113ee7.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/affix.self-49100d650983a471242f420a2f71d4dd8a6c69a6edc428d681b9dfee968cfe55.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/alert.self-ebce91ec66c71bcee451ea7da9128fd1bf8faa02c6d22ea04c598423431e4c08.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/button.self-ceb562de883e04359bb2c06f07bdf6ecf065cc8a5027e2e58857c5e91b0b68e3.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/carousel.self-c8c6cef5d534d29ac36d3e51d0015b5206ea68ffd953bd6335d567d48ed20499.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/collapse.self-528b9bfca6e2fcf0c89e04259a423626f98ee01d30c7d107b90bc51b9eae5e27.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/dropdown.self-0007e3253a4a64868a9a054ddf3d384f51e2b0cb384d9caf3075dff063b7d5b4.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/tab.self-7e3ee4a243bb416b5f0111a0be08f8547c5d72ba71fe4afe4a4a007f5cb4e10e.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/transition.self-212c8fd7042f0232c3cf9250d14c24a1817a3426b077935a90053ba5d31788a6.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/scrollspy.self-caaed30f2e09d6c6b7ff7fb562255db128d86c15d675559af033e7e07a902426.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/modal.self-59d0352830bf332010f1a0a28c18d873c4864ad7ad07cde3d4a7e577fcabd914.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/tooltip.self-6c35000b288bb75bd072d33ccd61cf1d1c9606662379284833d2194218670db0.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap/popover.self-25ae20e1d99b37105bc6f6c8be0dbfc53e9abaf37b9bd1d006371fdaa8ca9f6c.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/bootstrap.self-fbfa5ad7d9aa0afe439ec4ff3883acc4cb92b62cb67c40d674320c9aa1d4642d.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/events.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/insert_map.self-94d01313394fe4aee75cd7dcb655c2d6ff7d3be7b7110bfebf5791a0a63a6c31.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/locations.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/users.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/assets/application.self-f8806224e027f3e3f0138ea9ce99319e298dfdb323304d1f1be6eae8e8c74724.js?body=1" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+
+
+Started GET "/users/2/markers.json" for 127.0.0.1 at 2015-05-26 16:45:42 -0400
+Processing by UsersController#markers as JSON
+  Parameters: {"id"=>"2"}
+  [1m[35mUser Load (0.1ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mLocation Load (0.2ms)[0m  [1mSELECT "locations".* FROM "locations" WHERE "locations"."user_id" = ?[0m  [["user_id", 2]]
+  Rendered users/markers.json.jbuilder (0.2ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.3ms)
