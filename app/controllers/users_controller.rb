@@ -20,6 +20,14 @@ class UsersController < ApplicationController
     # ];
    end
 
+   def markers
+    @user = User.find(params[:id])
+    @markers = @user.markers
+    respond_to do |format|
+        format.json {render :markers}
+    end
+   end
+
    def create
      @user = User.create(safe_params)
    end
