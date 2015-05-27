@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
   resources :users do
-    resources :locations 
+    resources :stories do
+      resources :locations
+    end
   end
 
   root "home#index"
