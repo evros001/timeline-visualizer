@@ -28,9 +28,19 @@
              <li class="active"><a href="<%= root_path %>">Home</a></li>
              <li><a href="<%= users_path %>">Users</a></li>
          </ul>
+         <% if user_signed_in? %>
          <ul class="nav navbar-nav navbar-right">
-             <li><a href="/users/login">Login</a></li>
+          <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
          </ul>
+         <% else %>
+         <ul class="nav navbar-nav navbar-right">
+             <li><%= link_to "Sign In", new_user_session_path %></li>
+             <li><%= link_to "Sign Up", new_user_registration_path %></li>
+             
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+         </ul>
+         <% end %>
      </div>
   </nav>
 
@@ -43,6 +53,10 @@
 
   <% if flash[:notice] -%>
     <p class='notice'><%=h flash[:notice] %></p>
+  <% end -%>
+
+  <% if flash[:alert] -%>
+    <p class='alert'><%=h flash[:alert] %></p>
   <% end -%>
 </center>
 
