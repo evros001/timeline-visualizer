@@ -13,6 +13,6 @@ Rails.application.routes.draw do
   get 'users/:id/markers', to: 'users#markers'
   get 'users/:id/stories/:id/markers', to: 'stories#markers'
 
-  get 'stories/all', to: 'stories#index'
+  get 'stories/index', to: 'stories#index'
 
 end
