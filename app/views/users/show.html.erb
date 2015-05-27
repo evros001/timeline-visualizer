@@ -2,29 +2,24 @@
 
 <!-- LIST OF LOCATIONS/EVENTS FOR THIS USER: -->
 
-<h2><%= @user.name %>'s locations:</h2>
+<h2><%= @user.name %>'s stories:</h2>
   <ul>
-    <% @user.locations.each do |location| %>
+    <% @user.stories.each do |story| %>
       <li>
-        <%= location.name %> |
-        <%= location.address %> |
-        <%= location.latitude %> |
-        <%= location.longitude %> |
-        <%= link_to 'View', user_location_path(@user.id, location.id) %> |
-        <%= link_to 'Edit', edit_user_location_path(@user.id, location.id) %> |
-        <%= link_to "Delete", user_location_path(@user.id, location.id), method: :delete, data: { confirm: 'Are you certain?' } %>
+        <%= story.name %> |
+        <%= story.description %> |
+        <%= link_to 'View', user_story_path(@user.id, story.id) %> |
+        <%= link_to 'Edit', edit_user_story_path(@user.id, story.id) %> |
+        <%= link_to "Delete", user_story_path(@user.id, story.id), method: :delete, data: { confirm: 'Are you certain?' } %>
         <br><br>
         </li>
     <% end %>
   </ul>
 
-
-[  <%= link_to "ADD LOCATION for #{@user.name.capitalize}", new_user_location_path(@user.id) %> |
-  <%= link_to "VIEW LOCATIONS for #{@user.name.capitalize}", user_path(@user.id) %> ]
+<%= link_to "ADD Story for #{@user.name.capitalize}", new_user_story_path(@user.id) %>
 
 <h2><%= @user.name %>'s map:</h2>
-ANOTHER MAP SHOULD BE HERE MAYBE?
+
 <div id="map-container">
   <div id="map-canvas"></div>
 </div>
-
