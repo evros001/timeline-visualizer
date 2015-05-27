@@ -16,8 +16,10 @@ function initialize() {
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
   map.setTilt(45);
 
-  var userId = $("#user_id").text();
-  var url = "/users/" + userId + "/markers.json";
+  // var userId = $("#user_id").text();
+  // var url = "/users/" + userId + "/markers.json";
+
+  var url = window.location.href + "/markers.json";
 
   var getMarkers = function(){
     return $.ajax({
@@ -45,15 +47,6 @@ function initialize() {
     }
     return arr
   }
-
-  // reference marker stuff:
-   //  return [
-   //       ['Flatiron School', 40.705329,-74.01397],
-   //       ['Brooklyn Museum', 40.671206,-73.963631],
-   //       ['The Grand Canyon', 36.3078536,-112.7834806]
-   // ];
-  
-   
 
   function plotPoints(markers){
     for( i = 0; i < markers.length; i++ ) {

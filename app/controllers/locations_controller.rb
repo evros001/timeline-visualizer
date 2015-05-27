@@ -43,7 +43,6 @@ class LocationsController < ApplicationController
     @location = Location.new(strong_params)
     @story = Story.find(params[:story_id])
     @user = User.find(params[:user_id])
-    binding.pry
   end
 
   def update
