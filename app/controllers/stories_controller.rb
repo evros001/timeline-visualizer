@@ -38,9 +38,11 @@ class StoriesController < ApplicationController
   end
 
   def markers
-    @story = Story.new(strong_params)
-    @user = User.find(params[:user_id])
-    binding.pry
+    @story = Story.find(params[:id])
+    @markers = @story.markers
+    respond_to do |format|
+        format.json {render :markers}
+    end
   end
 
   def update
