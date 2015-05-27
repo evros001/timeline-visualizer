@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :set_user, only: [:show, :edit, :update]
+  before_action :set_user, only: [:show, :edit, :update, :markers]
 
   def index
     @users = User.all
@@ -10,16 +10,12 @@ class UsersController < ApplicationController
   end
 
   def show
-    # if !@user
-    #    redirect_to root_path  
-    # else
-      @user = User.find(params[:id])
+      # @user = User.find(params[:id])
       @markers = @user.markers      
-    # end
   end
 
   def markers
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
     @markers = @user.markers
     respond_to do |format|
         format.json {render :markers}
@@ -31,9 +27,9 @@ class UsersController < ApplicationController
   end
 
   private
-    # def set_user
-    #   @user = User.find(params[:id])
-    # end
+    def set_user
+      @user = User.find(params[:id])
+    end
 
   def safe_params
     params.require(:user).permit(:name, :email, :story_id, :location_id)
