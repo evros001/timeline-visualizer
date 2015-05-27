@@ -1,0 +1,7 @@
+<h1>All the Stories:</h1>
+
+<ul>
+  <% @stories.each do |story| %>
+    <li><%= link_to story.name, user_story_path(story.user_id, story.id) %></li>
+  <% end %>
+</ul>
