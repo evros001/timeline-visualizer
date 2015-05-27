@@ -1,21 +1,21 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_user, only: [:show, :edit, :update, :markers]
 
-    def index
-      @users = User.all
-    end
+  def index
+    @users = User.all
+  end
 
-    def new
-     @user = User.new
-    end
+  def new
+    @user = User.new
+  end
 
-   def show
-     @user = User.find(params[:id])
-     @markers = @user.markers
-   end
+  def show
+      # @user = User.find(params[:id])
+      @markers = @user.markers      
+  end
 
   def markers
-    @user = User.find(params[:id])
+    # @user = User.find(params[:id])
     @markers = @user.markers
     respond_to do |format|
         format.json {render :markers}
@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       @user = User.find(params[:id])
     end
 
-   def safe_params
-     params.require(:user).permit(:name, :email, :story_id, :location_id)
-   end
+  def safe_params
+    params.require(:user).permit(:name, :email, :story_id, :location_id)
+  end
 end
