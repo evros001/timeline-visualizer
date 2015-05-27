@@ -8,3 +8,4 @@
 
 adam = User.create!(name: "Adam", email: "a@a.com")
 stef = User.create!(name: "Stef", email: "s@s.com")
+evan = User.create!(name: "Evan", email: "e@e.com")

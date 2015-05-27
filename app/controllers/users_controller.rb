@@ -37,6 +37,6 @@ class UsersController < ApplicationController
     end
 
    def safe_params
-     params.require(:user).permit(:name, :email, :location_id)
+     params.require(:user).permit(:name, :email, :story_id, :location_id)
    end
 end
