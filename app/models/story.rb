@@ -1,6 +1,6 @@
-class User < ActiveRecord::Base
-  has_many :stories
-  has_many :locations, through: :stories
+class Story < ActiveRecord::Base
+  belongs_to :user
+  has_many :locations
 
   def markers
     arr = Array.new

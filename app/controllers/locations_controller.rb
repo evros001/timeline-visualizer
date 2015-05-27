@@ -7,6 +7,7 @@ class LocationsController < ApplicationController
 
   def show
     @location = Location.find(params[:id])
+    @story = Story.find(params[:story_id])
     @user = User.find(params[:user_id])
   end
 
@@ -16,17 +17,19 @@ class LocationsController < ApplicationController
 
   def edit
     @location = Location.find(params[:id])
+    @story = Story.find(params[:story_id])
     @user = User.find(params[:user_id])
   end
 
   def create
     @location = Location.new(strong_params)
+    @story = Story.find(params[:story_id])
     @user = User.find(params[:user_id])
-    @location.user_id = @user.id
+    @location.story_id = @story.id
 
     respond_to do |format|
       if @location.save
-        @user.locations << @location
+        @story.locations << @location
         format.html { redirect_to user_path(params[:user_id]), notice: 'Location was successfully created.' }
         format.json { render :show, status: :created, location: @location }
       else
@@ -38,9 +41,9 @@ class LocationsController < ApplicationController
 
   def markers
     @location = Location.new(strong_params)
+    @story = Story.find(params[:story_id])
     @user = User.find(params[:user_id])
-    binding.pry
-  end 
+  end
 
   def update
     respond_to do |format|
