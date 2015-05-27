@@ -16,9 +16,10 @@ function initialize() {
   map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
   map.setTilt(45);
 
-  // var userId = $("#user_id").text();
-  // var url = "/users/" + userId + "/markers.json";
+  //creating infowindow on map
+  var infoWindow = new google.maps.InfoWindow()
 
+  //ajax call
   var url = window.location.href + "/markers.json";
 
   var getMarkers = function(){
@@ -42,8 +43,8 @@ function initialize() {
       singleMarker.push(data["markers"][i]["name"]);
       singleMarker.push(data["markers"][i]["latitude"]);
       singleMarker.push(data["markers"][i]["longitude"]);
+      singleMarker.push(data["markers"][i]["description"]);
       arr.push(singleMarker);
-
     }
     return arr
   }
@@ -57,24 +58,18 @@ function initialize() {
         map: map,
         title: markers[i][0]
        });
+
+      //assign click handler to each location icon
+      google.maps.event.addListener(marker, 'click', (function(marker, i) {
+        return function() {
+              infoWindow.setContent("<h3>"+markers[i][0]+"</h3>"+"<p>"+markers[i][3]+"</p>"+"<img src=''>");
+              infoWindow.open(map, marker);
+        }
+      })(marker, i));
     }
 
-    // Allow each marker to have an info window
-    google.maps.event.addListener(marker, 'click', (function(marker, i) {
-      return function() {
-        infoWindow.setContent(infoWindowContent[i][0]);
-        infoWindow.open(map, marker);
-      }
-    })(marker, i));
-
-    // Automatically center the map fitting all markers on the screen
     map.fitBounds(bounds);
   }
 
-  // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
-  // var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-  //   this.setZoom(14);
-  //   google.maps.event.removeListener(boundsListener);
-  // });
 
 }
