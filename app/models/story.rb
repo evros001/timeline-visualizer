@@ -5,7 +5,7 @@ class Story < ActiveRecord::Base
   def markers
     arr = Array.new
     locations.each do |location|
-      arr << [location.name, location.latitude, location.longitude]
+      arr << [location.name, location.latitude, location.longitude, location.description]
     end
     return arr
   end
