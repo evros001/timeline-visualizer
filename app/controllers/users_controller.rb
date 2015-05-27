@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     # @user = User.find(params[:id])
     @markers = @user.markers
     respond_to do |format|
-        format.json {render :markers}
+        format.json {render "../views/stories/markers"}
     end
   end
 
