@@ -71,6 +71,6 @@ class LocationsController < ApplicationController
     end
 
     def strong_params
-      params.require(:location).permit(:name, :address, :latitude, :longitude)
+      params.require(:location).permit(:name, :address, :latitude, :longitude, :description)
     end
 end
