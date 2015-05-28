@@ -5,10 +5,12 @@ jQuery(function($) {
   document.body.appendChild(script);
 });
 
+
+
 function initialize() {
   var map;
   var bounds = new google.maps.LatLngBounds();
-  var style = [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"featureType":"transit","elementType":"all","stylers":[{"color":"#146474"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#021019"}]}] 
+  var style = [{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"weight":1}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"weight":0.8}]},{"featureType":"landscape","stylers":[{"color":"#ffffff"}]},{"featureType":"water","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"labels.text","stylers":[{"visibility":"on"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#000000"}]},{"elementType":"labels.icon","stylers":[{"visibility":"on"}]}] 
 
   var mapOptions = {
       mapTypeId: 'terrain', 
@@ -23,7 +25,12 @@ function initialize() {
   var infoWindow = new google.maps.InfoWindow()
 
   //ajax call
-  var url = window.location.href + "/markers.json";
+  if(window.location.href === "http://localhost:3000/"){
+    var url = window.location.href + "markers.json";
+  }
+  else{
+    var url = window.location.href + "/markers.json";
+  }
 
   var getMarkers = function(){
     return $.ajax({
@@ -33,8 +40,15 @@ function initialize() {
     });
   }
 
-  var jsonResponse = getMarkers().done(function(data){
+  var jsonResponse = getMarkers().done(
+    function(data){
     var markers = formatData(data)
+    plotPoints(markers)
+  });
+
+  var jsonResponseFail = getMarkers().fail(
+    function(data){
+    var markers = [["Flatiron School", 40.705866, -74.014056, "A Place To Learn"], ["Yankee Stadium", 40.830406, -73.926088, "ballgame!"]]
     plotPoints(markers)
   });
 
