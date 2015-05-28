@@ -1,5 +1,6 @@
 class StoriesController < ApplicationController
   before_action :set_story, only: [:show, :edit, :update, :destroy]
+  before_action :verify_user, only: [:edit, :new, :create, :destroy]
 
   def index
     @stories = Story.all
@@ -72,5 +73,11 @@ class StoriesController < ApplicationController
 
     def strong_params
       params.require(:story).permit(:name, :description, :user_id, :location_id)
+    end
+
+    def verify_user
+      if current_user.id.to_s != params[:user_id]
+        redirect_to root_path
+      end
     end
 end
