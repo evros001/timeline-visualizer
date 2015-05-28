@@ -5,11 +5,16 @@ jQuery(function($) {
   document.body.appendChild(script);
 });
 
+
+
 function initialize() {
   var map;
   var bounds = new google.maps.LatLngBounds();
+  var style = [{"featureType":"road","elementType":"labels","stylers":[{"visibility":"on"}]},{"featureType":"poi","stylers":[{"visibility":"off"}]},{"featureType":"administrative","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"weight":1}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"weight":0.8}]},{"featureType":"landscape","stylers":[{"color":"#ffffff"}]},{"featureType":"water","stylers":[{"visibility":"off"}]},{"featureType":"transit","stylers":[{"visibility":"off"}]},{"elementType":"labels","stylers":[{"visibility":"off"}]},{"elementType":"labels.text","stylers":[{"visibility":"on"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#000000"}]},{"elementType":"labels.icon","stylers":[{"visibility":"on"}]}] 
+
   var mapOptions = {
-      mapTypeId: 'terrain'
+      mapTypeId: 'terrain', 
+      styles: style
   };
 
   // Display a map on the page
@@ -20,7 +25,12 @@ function initialize() {
   var infoWindow = new google.maps.InfoWindow()
 
   //ajax call
-  var url = window.location.href + "/markers.json";
+  if(window.location.href === "http://localhost:3000/"){
+    var url = window.location.href + "markers.json";
+  }
+  else{
+    var url = window.location.href + "/markers.json";
+  }
 
   var getMarkers = function(){
     return $.ajax({
@@ -30,8 +40,15 @@ function initialize() {
     });
   }
 
-  var jsonResponse = getMarkers().done(function(data){
+  var jsonResponse = getMarkers().done(
+    function(data){
     var markers = formatData(data)
+    plotPoints(markers)
+  });
+
+  var jsonResponseFail = getMarkers().fail(
+    function(data){
+    var markers = [["Flatiron School", 40.705866, -74.014056, "A Place To Learn"], ["Yankee Stadium", 40.830406, -73.926088, "ballgame!"]]
     plotPoints(markers)
   });
 
@@ -49,6 +66,8 @@ function initialize() {
     return arr
   }
 
+  var star = "http://oi58.tinypic.com/ic4l5j.jpg"
+
   function plotPoints(markers){
     for( i = 0; i < markers.length; i++ ) {
       var position = new google.maps.LatLng(markers[i][1], markers[i][2]);
@@ -56,7 +75,8 @@ function initialize() {
       marker = new google.maps.Marker({
         position: position,
         map: map,
-        title: markers[i][0]
+        title: markers[i][0], 
+        icon: star
        });
 
       //assign click handler to each location icon
