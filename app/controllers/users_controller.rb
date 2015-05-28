@@ -14,14 +14,6 @@ class UsersController < ApplicationController
       @markers = @user.markers      
   end
 
-  # def markers
-  #   # @user = User.find(params[:id])
-  #   @markers = [["Flatiron School", 40.705866, -74.014056, "Learn"]]
-  #   respond_to do |format|
-  #       format.json {render "../views/stories/markers"}
-  #   end
-  # end
-
   def create
     @user = User.create(safe_params)
   end
