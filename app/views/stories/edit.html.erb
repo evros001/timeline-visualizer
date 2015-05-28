@@ -24,13 +24,13 @@
         <%= f.text_field :description, :size=>"50" %>
       </div>
       <div class="actions">
-        <%= f.submit %>
+        <%= f.submit "Update Name & Description" %>
       </div>
     <% end %>
   </div>
   <div class="col-sm-6 col-xs-12">
   <h1>Add a location to this story</h1>
-  <%= form_for Location.new, url: user_story_locations_path(:user_id => @story.user_id, :story_id => @story.id) do |f| %>
+  <%= form_for Location.new, url: user_story_locations_path(:user_id => @story.user_id, :story_id => @story.id), remote: true do |f| %>
     <div class="field">
       <%= f.label :name %><br>
       <%= f.text_field :name, :size=>"40" %>
@@ -44,7 +44,7 @@
       <%= f.text_field :address, :size=>"40" %>
     </div>
     <div class="actions">
-      <%= f.submit %>
+      <%= f.submit "Add New Location" %>
     </div>
   <% end %>
 
@@ -54,7 +54,7 @@
 <h1>Edit Story Locations</h1>
 <div class="row">
 <% @story.locations.each do |location| %>
-  <%= form_for location, url: user_story_location_path(:user_id => location.story.user_id, :story_id => location.story_id, :id => location.id) do |f| %>
+  <%= form_for location, url: user_story_location_path(:user_id => location.story.user_id, :story_id => location.story_id, :id => location.id), remote: true do |f| %>
     <div class="col-md-4 col-sm-6 col-xs-12">
       <div class="field">
         <%= f.label :name %><br>

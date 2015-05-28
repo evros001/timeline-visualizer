@@ -2,6 +2,8 @@
 
 <ul>
   <% @stories.each do |story| %>
-    <li><%= link_to story.name, user_story_path(story.user_id, story.id) %></li>
+    <li><%= link_to story.name, user_story_path(story.user_id, story.id) %> - created by <%= story.user.name %><br>
+    <%= story.description %>
+    </li>
   <% end %>
 </ul>
