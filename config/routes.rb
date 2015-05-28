@@ -15,6 +15,6 @@ Rails.application.routes.draw do
   get 'users/:id/stories/:id/markers', to: 'stories#markers'
 
   get 'stories/index', to: 'stories#index'
-  get 'users/sign_in', to: 'users#markers'
+  get 'users/sign_in/markers', to: 'users#markers'
 
 end

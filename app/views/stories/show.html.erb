@@ -1,13 +1,13 @@
 <div class="nav-text">
   <h2><%= @user.name.capitalize %>'s Story: <%= @story.name %></h2>
-
-  <p>
-    <strong>Description:</strong>
-    <%= @story.description %>
-  </p>
-
+<p>
+  <strong>Description:</strong>
+  <%= @story.description %>
+</p>
+  <% if user_signed_in? && current_user.id == @user.id %>
     <%= link_to 'Edit', edit_user_story_path(@user.id, @story.id) %> |
     <%= link_to "Delete", user_story_path(@user.id, @story.id), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+  <% end %>
 </div>
 <div id="map-container">
   <div id="map-canvas"></div>
