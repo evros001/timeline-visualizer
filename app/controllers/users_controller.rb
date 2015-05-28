@@ -1,3 +1,4 @@
+
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :markers]
   before_action :verify_user, only: [:edit, :destroy]
@@ -11,15 +12,13 @@ class UsersController < ApplicationController
   end
 
   def show
-      # @user = User.find(params[:id])
-      @markers = @user.markers      
+    @markers = @user.markers      
   end
 
   def markers
-    # @user = User.find(params[:id])
     @markers = @user.markers
     respond_to do |format|
-        format.json {render "../views/stories/markers"}
+      format.json {render "../views/stories/markers"}
     end
   end
 
@@ -37,7 +36,7 @@ class UsersController < ApplicationController
   end
 
   def verify_user
-    if current_user.id.to_s != params[:user_id]
+    if !user_signed_in? || current_user.id.to_s != params[:user_id]
       redirect_to root_path
     end
   end
