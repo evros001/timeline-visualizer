@@ -22,7 +22,12 @@
 /* Some Style from the Bootstrap Default Theme */
 body {
   padding-bottom: 30px;
-  margin-top: -20px
+  margin-top: -20px;
+  background-color: #aaa;
+}
+
+.opacity {
+  opacity: 0.4;
 }
 
 .theme-dropdown .dropdown-menu {
@@ -58,6 +63,9 @@ body {
   margin-left: 50vw;
   margin-top: 30vh;
   z-index: 100;
+  padding: 20px;
+  background-color: #fff;
+  border: 2px solid #000;
 }
 
 #nav-container {
@@ -65,18 +73,24 @@ body {
   float: left;
   height: 100vh;
   width: 15%;
-  background-color: #f8f8f8;
+  /*background-color: #f8f8f8;*/
+  background-color: black;
   z-index: 99;
+  border-left: white;
+  border-right: white;
+  border-bottom: white;
 }
 
 div.navbar-header {
-  width: 100%
+  width: 100%;
+  margin: 20px 0px;
 }
 
 .navbar-brand {
   padding-top: 30px;
   width: 100%;
   text-align: center;
+  color: white; 
 }
 
 .navbar-nav {
@@ -87,6 +101,8 @@ div.navbar-header {
   display: block;
   width: 100%;
   text-align: center;
+  color: white;
+  border-bottom: 3px solid #777;
 }
 
 .nav-text {
@@ -98,4 +114,16 @@ div.navbar-header {
   font-size: 1em
 }
 
+.navbar-default {
+  background-color: black;
+  border-bottom: none;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
+  color: white;
+}
+
+/*.navbar-nav{
+  margin-top: 20px
+}*/
 

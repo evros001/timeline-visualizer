@@ -10,9 +10,11 @@ Rails.application.routes.draw do
 
   root "home#index"
 
+  get 'markers', to: 'home#markers'
   get 'users/:id/markers', to: 'users#markers'
   get 'users/:id/stories/:id/markers', to: 'stories#markers'
 
   get 'stories/index', to: 'stories#index'
+  get 'users/sign_in', to: 'users#markers'
 
 end
