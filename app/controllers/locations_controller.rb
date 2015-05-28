@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
+  before_action :verify_user, only: [:edit, :new, :create, :destroy]
 
   def index
     @locations = Location.all
@@ -72,5 +73,11 @@ class LocationsController < ApplicationController
 
     def strong_params
       params.require(:location).permit(:name, :address, :latitude, :longitude, :description)
+    end
+
+    def verify_user
+      if current_user.id.to_s != params[:user_id]
+        redirect_to root_path
+      end
     end
 end
