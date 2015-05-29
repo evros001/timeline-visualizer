@@ -272,10 +272,10 @@ function initialize() {
             }
         ]
     }
-]                              
+]
 
   var mapOptions = {
-      mapTypeId: 'terrain', 
+      mapTypeId: 'terrain',
       styles: style
   };
 
@@ -338,7 +338,7 @@ function initialize() {
       marker = new google.maps.Marker({
         position: position,
         map: map,
-        title: markers[i][0], 
+        title: markers[i][0],
         icon: star
        });
 
