@@ -20,11 +20,26 @@
  */
 @import "bootstrap";
 /* Some Style from the Bootstrap Default Theme */
+* {
+  font-family: 'Roboto', sans-serif;
+}
 body {
-  padding-bottom: 30px;
-  margin-top: -20px;
   background-color: #fff;
 }
+
+h1 {
+  margin-top: 0px;  
+}
+
+/*nav logo*/
+
+#logo_img {
+  height: 45px;
+  margin-bottom: 5px;
+  margin-left: 40%;
+}
+
+/* blue color **** #52dafb */
 
 .opacity {
   opacity: 0.4;
@@ -86,7 +101,7 @@ div.navbar-header {
 }
 
 .navbar-brand {
-  padding-top: 30px;
+  padding-top: 15px;
   width: 100%;
   text-align: center;
   color: #fff; 
@@ -104,6 +119,7 @@ div.navbar-header {
   border-bottom: 3px solid #777;
 }
 
+
 .nav-text {
   display: block;
   float: left;
@@ -112,6 +128,14 @@ div.navbar-header {
   margin-left: -240px;
   font-size: 1em;
   color: #fff;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
+  color: #52dafb;
+}
+
+.nav-text p, .nav-text h2, .nav-text h1, .nav-text a:first-of-type {
+  margin-left: 30px;  
 }
 
 .navbar-default {
@@ -123,6 +147,18 @@ div.navbar-header {
   color: #fff;
 }
 
-/*.navbar-nav{
-  margin-top: 20px
-}*/
+
+.navbar-collapse {
+  padding-left: 0px;
+  padding-right: 0px;
+}
+
+/*editing/updating/listing styles*/
+
+.row-container {
+  display: inline-block;
+}
+
+
+/*possible font choices*/
+/*Nunito, Yanone Kaffeesatz, brie sarif, Cabin Condensed, Alfa Slab One, Lobster*/
