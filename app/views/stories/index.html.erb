@@ -7,3 +7,7 @@
     </li>
   <% end %>
 </ul>
+
+<% if user_signed_in? && current_user.id == @user.id %>
+  <%= link_to "Create New Story", new_user_story_path(@user.id) %>
+<% end %>
