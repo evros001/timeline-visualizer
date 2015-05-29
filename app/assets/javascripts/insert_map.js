@@ -1,7 +1,7 @@
 jQuery(function($) {
   // Asynchronously Load the map API
   var script = document.createElement('script');
-  script.src = "http://maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
+  script.src = "//maps.googleapis.com/maps/api/js?sensor=false&callback=initialize";
   document.body.appendChild(script);
 });
 
@@ -272,10 +272,10 @@ function initialize() {
             }
         ]
     }
-]                              
+]
 
   var mapOptions = {
-      mapTypeId: 'terrain', 
+      mapTypeId: 'terrain',
       styles: style
   };
 
@@ -328,8 +328,8 @@ function initialize() {
     return arr
   }
 
-  var star = "http://oi59.tinypic.com/fz99hw.jpg"
-  // http://oi59.tinypic.com/fz99hw.jpg
+  var star = "https://openmerchantaccount.com/img/quote_marker.png"
+
 
   function plotPoints(markers){
     for( i = 0; i < markers.length; i++ ) {
@@ -338,7 +338,7 @@ function initialize() {
       marker = new google.maps.Marker({
         position: position,
         map: map,
-        title: markers[i][0], 
+        title: markers[i][0],
         icon: star
        });
 
