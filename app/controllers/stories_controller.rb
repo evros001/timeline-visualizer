@@ -51,6 +51,7 @@ class StoriesController < ApplicationController
       if @story.update(strong_params)
         format.html { redirect_to user_path(params[:user_id]), notice: 'Story was successfully updated.' }
         format.json { render :show, status: :ok, story: @story }
+        format.js { render "update.js"}
       else
         format.html { render :edit }
         format.json { render json: @story.errors, status: :unprocessable_entity }
