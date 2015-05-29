@@ -52,7 +52,7 @@ h1 {
 }
 
 .theme-showcase > p > .btn {
-  margin: 0px, 0px, 5px 0px;
+  margin: 0, 0, 5px 0;
 }
 
 #map-canvas {
@@ -60,7 +60,6 @@ h1 {
   max-width: none;
   margin: 0;
   padding: 0;
-
 }
 
 .info_content {
@@ -89,34 +88,34 @@ h1 {
   height: 100vh;
   width: 15%;
   /*background-color: #f8f8f8;*/
-  background-color: black;
+  background-color: #000;
   z-index: 99;
-  border-left: white;
-  border-right: white;
-  border-bottom: white;
+  border-left: #fff;
+  border-right: #fff;
+  border-bottom: #fff;
 }
 
 div.navbar-header {
   width: 100%;
-  margin: 20px 0px;
+  margin: 20px 0;
 }
 
 .navbar-brand {
   padding-top: 15px;
   width: 100%;
   text-align: center;
-  color: white; 
+  color: #fff; 
 }
 
 .navbar-nav {
-  width: 100%
+  width: 100%;
 }
 
 .navbar-nav li {
   display: block;
   width: 100%;
   text-align: center;
-  color: white;
+  color: #fff;
   border-bottom: 3px solid #777;
 }
 
@@ -128,7 +127,7 @@ div.navbar-header {
   margin-top: 300px;
   margin-left: -240px;
   font-size: 1em;
-  color:white;
+  color: #fff;
 }
 
 .navbar-default .navbar-brand:hover, .navbar-default .navbar-nav > li > a:hover {
@@ -140,13 +139,14 @@ div.navbar-header {
 }
 
 .navbar-default {
-  background-color: black;
+  background-color: #000;
   border-bottom: none;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
-  color: white;
+  color: #fff;
 }
+
 
 .navbar-collapse {
   padding-left: 0px;
@@ -162,6 +162,3 @@ div.navbar-header {
 
 /*possible font choices*/
 /*Nunito, Yanone Kaffeesatz, brie sarif, Cabin Condensed, Alfa Slab One, Lobster*/
-
-
-
