@@ -3,7 +3,7 @@
       <div class="col-sm-6 col-xs-12">
         <h1>Edit Story Information</h1>
 
-        <%= form_for @story, url: user_story_path do |f| %>
+        <%= form_for @story, url: user_story_path, remote: true do |f| %>
           <% if @story.errors.any? %>
             <div id="error_explanation">
               <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
@@ -27,9 +27,10 @@
           <div class="actions">
             <%= f.submit "Update Name & Description" %>
           </div>
+          <div id="notice-goes-here"></div>
         <% end %>
       </div>
-      <div class="col-sm-6 col-xs-12">
+      <div class="col-sm-6 col-xs-12" id="new-location-form">
       <h1>Add a location to this story</h1>
       <%= form_for Location.new, url: user_story_locations_path(:user_id => @story.user_id, :story_id => @story.id), remote: true do |f| %>
         <div class="field">
@@ -47,6 +48,7 @@
         <div class="actions">
           <%= f.submit "Add New Location" %>
         </div>
+        <div id="new-location-message"></div>
       <% end %>
 
 
@@ -70,12 +72,12 @@
             <%= f.text_field :address, :size=>"40" %>
           </div>
           <div class="actions">
+          <span class="update-<%=location.id%>"></span>
             <%= f.submit "Update This Location" %>
           </div>
         </div>
       <% end %>
+       
     <% end %>
     <div>
 </div>
-
-<!-- /users/:user_id/stories/:story_id/locations/:id(.:format) -->

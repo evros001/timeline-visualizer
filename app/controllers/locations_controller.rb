@@ -33,6 +33,7 @@ class LocationsController < ApplicationController
         @story.locations << @location
         format.html { redirect_to user_path(params[:user_id]), notice: 'Location was successfully created.' }
         format.json { render :show, status: :created, location: @location }
+        format.js { render "create.js"}
       else
         format.html { render :new }
         format.json { render json: @location.errors, status: :unprocessable_entity }
@@ -51,6 +52,7 @@ class LocationsController < ApplicationController
       if @location.update(strong_params)
         format.html { redirect_to user_path(params[:user_id]), notice: 'Location was successfully updated.' }
         format.json { render :show, status: :ok, location: @location }
+        format.js { render "update.js"}
       else
         format.html { render :edit }
         format.json { render json: @location.errors, status: :unprocessable_entity }

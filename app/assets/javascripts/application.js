@@ -15,3 +15,6 @@
 //= require bootstrap
 //= require_tree ../../../vendor/assets/javascripts/.
 //= require_tree .
+ $.ajaxSetup({  
+    'beforeSend': function (xhr) {xhr.setRequestHeader('Content-Type', 'application/javascript');}  
+ }); 
