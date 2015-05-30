@@ -3,6 +3,7 @@ class StoriesController < ApplicationController
   before_action :verify_user, only: [:edit, :new, :create, :destroy]
 
   def index
+    @user = current_user
     @stories = Story.all
   end
 
