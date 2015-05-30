@@ -31,7 +31,7 @@ class LocationsController < ApplicationController
     respond_to do |format|
       if @location.save
         @story.locations << @location
-        format.html { redirect_to user_path(params[:user_id]), notice: 'Location was successfully created.' }
+        format.html { redirect_to edit_user_story_path(@user.id, @story.id), notice: 'Location was successfully created.' }
         format.json { render :show, status: :created, location: @location }
         format.js { render "create.js"}
       else
