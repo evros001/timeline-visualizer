@@ -3,4 +3,8 @@ class Location < ActiveRecord::Base
   after_validation :geocode
 
   belongs_to :story
+
+  validates :name, presence: true
+  validates :address, presence: true
+  validates :description, presence: true
 end

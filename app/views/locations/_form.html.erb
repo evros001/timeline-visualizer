@@ -1,4 +1,5 @@
 <%= form_for @location, url: user_story_locations_path do |f| %>
+
   <% if @location.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@location.errors.count, "error") %> prohibited this location from being saved:</h2>
@@ -11,12 +12,12 @@
     </div>
   <% end %>
 
-<div class="field">
-  <%= f.label :name, "Location Name:" %><br>
-  <%= f.text_area :name, size: "60x1" %>
-</div>
   <div class="field">
-    <%= f.label :address, "Location Address:" %><br>
+    <%= f.label :name, "Location name:" %><br>
+    <%= f.text_area :name, size: "60x1" %>
+  </div>
+  <div class="field">
+    <%= f.label :address, "Enter city and state, landmark, or specific address:" %><br>
     <%= f.text_area :address, size: "60x1" %>
   </div>
     <div class="field">
@@ -26,4 +27,5 @@
   <div class="actions">
     <%= f.submit %>
   </div>
+
 <% end %>
