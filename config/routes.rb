@@ -11,7 +11,6 @@ Rails.application.routes.draw do
   root "home#index"
 
   get 'about', to: 'home#about'
-  get 'markers', to: 'home#markers'
   get 'users/:id/markers', to: 'users#markers'
   get 'users/:id/stories/:id/markers', to: 'stories#markers'
 

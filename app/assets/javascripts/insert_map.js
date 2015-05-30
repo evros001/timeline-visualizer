@@ -15,262 +15,150 @@ function initialize() {
         "featureType": "water",
         "elementType": "labels.text",
         "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "invert_lightness": false
-            },
-            {
-                "color": "#004963"
-            },
-            {
-                "weight": 8
-            }
+            {"visibility": "simplified"},
+            {"invert_lightness": false},
+            {"color": "#004963"},
+            {"weight": 8}
         ]
     },
     {
         "featureType": "water",
         "elementType": "geometry.fill",
         "stylers": [
-            {
-                "invert_lightness": false
-            },
-            {
-                "color": "#b7ebeb"
-            },
-            {
-                "saturation": -53
-            },
-            {
-                "lightness": 2
-            }
+            {"invert_lightness": false},
+            {"color": "#b7ebeb"},
+            {"saturation": -53},
+            {"lightness": 2}
         ]
     },
     {
         "featureType": "landscape.man_made",
         "elementType": "geometry",
         "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "invert_lightness": false
-            },
-            {
-                "hue": "#767878"
-            },
-            {
-                "saturation": -93
-            },
-            {
-                "lightness": 56
-            }
-        ]
+            {"visibility": "on"},
+            {"invert_lightness": false},
+            {"hue": "#767878"},
+            {"saturation": -93},
+            {"lightness": 56}]
     },
     {
         "featureType": "landscape.man_made",
         "elementType": "geometry.stroke",
         "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#b8dbe0"
-            },
-            {
-                "saturation": -7
-            },
-            {
-                "lightness": 33
-            }
-        ]
+            {"visibility": "on"},
+            {"color": "#b8dbe0"},
+            {"saturation": -7},
+            {"lightness": 33}]
     },
     {
         "featureType": "poi",
         "elementType": "all",
         "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "saturation": -1
-            }
-        ]
+            {"visibility": "simplified"},
+            {"saturation": -1}]
     },
     {
         "featureType": "poi.park",
         "elementType": "geometry.fill",
         "stylers": [
-            {
-                "color": "#d1e6d7"
-            }
-        ]
+            {"color": "#d1e6d7"}]
     },
     {
         "featureType": "poi.sports_complex",
         "elementType": "all",
         "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 61
-            }
-        ]
+            {"saturation": -100},
+            {"lightness": 61}]
     },
     {
         "featureType": "poi.school",
         "elementType": "all",
         "stylers": [
-            {
-                "visibility": "off"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 80
-            }
-        ]
+            {"visibility": "off"},
+            {"saturation": -100},
+            {"lightness": 80}]
     },
     {
         "featureType": "poi.place_of_worship",
         "elementType": "all",
         "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
+            {"visibility": "off"}]
     },
     {
         "featureType": "poi.business",
         "elementType": "all",
         "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
+            {"visibility": "off"}]
     },
     {
         "featureType": "administrative.land_parcel",
         "elementType": "labels.text",
         "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "color": "#d74340"
-            },
-            {
-                "saturation": -32
-            }
-        ]
+            {"visibility": "simplified"},
+            {"color": "#d74340"},
+            {"saturation": -32}]
     },
     {
         "featureType": "transit.line",
         "elementType": "all",
         "stylers": [
-            {
-                "visibility": "off"
-            }
-        ]
+            {"visibility": "off"}]
     },
     {
         "featureType": "transit.station.rail",
         "elementType": "labels.text.fill",
         "stylers": [
-            {
-                "color": "#d74340"
-            }
-        ]
+            {"color": "#d74340"}]
     },
     {
         "featureType": "transit.station.rail",
         "elementType": "labels.icon",
         "stylers": [
-            {
-                "visibility": "simplified"
-            },
-            {
-                "lightness": 0
-            },
-            {
-                "gamma": 2.05
-            }
-        ]
+            {"visibility": "simplified"},
+            {"lightness": 0},
+            {"gamma": 2.05}]
     },
     {
         "featureType": "road.highway",
         "elementType": "geometry.fill",
         "stylers": [
-            {
-                "lightness": 100
-            }
-        ]
+            {"lightness": 100}]
     },
     {
         "featureType": "road.highway",
         "elementType": "geometry.stroke",
         "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 78
-            }
-        ]
+            {"saturation": -100},
+            {"lightness": 78}]
     },
     {
         "featureType": "road.highway",
         "elementType": "labels.text.fill",
         "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "color": "#000000"
-            },
-            {
-                "lightness": 40
-            }
-        ]
+            {"visibility": "on"},
+            {"color": "#000000"},
+            {"lightness": 40}]
     },
     {
         "featureType": "road.arterial",
         "elementType": "geometry.stroke",
         "stylers": [
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 54
-            }
-        ]
+            {"saturation": -100},
+            {"lightness": 54}]
     },
     {
         "featureType": "road.local",
         "elementType": "geometry.stroke",
         "stylers": [
-            {
-                "visibility": "on"
-            },
-            {
-                "saturation": -100
-            },
-            {
-                "lightness": 28
-            }
-        ]
+            {"visibility": "on"},
+            {"saturation": -100},
+            {"lightness": 28}]
     },
     {
         "featureType": "road.local",
         "elementType": "geometry.fill",
         "stylers": [
-            {
-                "color": "#ffffff"
-            }
-        ]
+            {"color": "#ffffff"}]
     }
 ]
 
@@ -287,12 +175,7 @@ function initialize() {
   var infoWindow = new google.maps.InfoWindow()
 
   //ajax call
-  if(window.location.href === "http://localhost:3000/"){
-    var url = window.location.href + "markers.json";
-  }
-  else{
-    var url = window.location.href + "/markers.json";
-  }
+  var url = window.location.href + "/markers.json";
 
   var getMarkers = function(){
     return $.ajax({
@@ -308,9 +191,16 @@ function initialize() {
     plotPoints(markers)
   });
 
+  img_2 = "https://openmerchantaccount.com/img/csb_leethackers.jpg"
+
   var jsonResponseFail = getMarkers().fail(
     function(data){
-    var markers = [["Flatiron School", 40.705866, -74.014056, "A Place To Learn"], ["Yankee Stadium", 40.830406, -73.926088, "ballgame!"]]
+    var markers = [
+      ["Flatiron School", 40.705866, -74.014056, "Lots of crying. I accidentally pantsed myself. Also supermodels hang out here. Wat... At least I learned how to code!!"],
+      ["Yankee Stadium", 40.830406, -73.926088, "A blackout-drunk SOX fan (seated behind two small children) taught me some new explatives  as her husband periodically glanced back at us with sullen, apologetic eyes. Yanks are too good."],
+      ["Hoboken", 40.7500, -74.0300, "They have Street Fighter tournaments... for hobos!"],
+      ["Grand Oaks Country Club", 40.550844, -74.205496, "Where my frat brother became my step-dad."]
+    ]
     plotPoints(markers)
   });
 
@@ -345,7 +235,8 @@ function initialize() {
       //assign click handler to each location icon
       google.maps.event.addListener(marker, 'click', (function(marker, i) {
         return function() {
-              infoWindow.setContent("<h3>"+markers[i][0]+"</h3>"+"<p>"+markers[i][3]+"</p>"+"<img src=''>");
+              infoWindow.setContent("<h3>" + markers[i][0]
+                                    + "</h3>" + "<p>" + markers[i][3]);
               infoWindow.open(map, marker);
         }
       })(marker, i));
