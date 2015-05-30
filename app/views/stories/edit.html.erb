@@ -58,7 +58,7 @@
     <div class="row">
     <% @story.locations.each do |location| %>
       <%= form_for location, url: user_story_location_path(:user_id => location.story.user_id, :story_id => location.story_id, :id => location.id), remote: true do |f| %>
-        <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="col-sm-6 col-xs-12">
           <div class="field">
             <%= f.label :name %><br>
             <%= f.text_field :name, :size=>"40" %>
