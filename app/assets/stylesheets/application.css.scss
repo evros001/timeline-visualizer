@@ -73,7 +73,7 @@ a:hover {
 }
 
 #logo-img {
-  margin-top: 10px;
+  margin-top: 20px;
   margin-bottom: -30px;
   height: 50px;
 }
@@ -83,6 +83,7 @@ a:hover {
   font-size: 95%;
   width: 100%;
   margin-bottom: 40px;
+  margin-top: 20px;
   display: block;
 }
 
@@ -159,10 +160,6 @@ a:hover {
   border-bottom: 1px solid #444;
 }
 
-.navbar-nav li:last-child  {
-  border:none;
-}
-
 .nav-text {
   font-family: 'Nunito', sans-serif;
   display: block;
@@ -190,6 +187,7 @@ a:hover {
 .navbar-default {
   background-color: #000;
   border-bottom: none;
+  border-color: #000;
 }
 
 .navbar-default .navbar-brand, .navbar-default .navbar-nav > li > a {
@@ -227,4 +225,34 @@ a:hover {
 
 .icons-block {
   display: inline-block;
+}
+
+/*fix margin top*/
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  margin: 0px
+}
+
+.blurb {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+
+/*edit update boxes over map*/
+.edit_update_container {  
+  position: absolute;
+  width: 700px;
+  height: 550px;
+  margin-left: 10%;
+  z-index: 1;
+  background-color: white;
+  top: 50%;
+  left: 50%;
+  border: 1px solid #000;
+-webkit-transform: translateX(-50%) translateY(-50%);
+ -moz-transform: translateX(-50%) translateY(-50%);
+ -ms-transform: translateX(-50%) translateY(-50%);
+ -o-transform: translateX(-50%) translateY(-50%);
+ transform: translateX(-50%) translateY(-50%);
 }
