@@ -1,3 +1,15 @@
-// Place all the styles related to the stories controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.index-list {
+ list-style-type: none;
+}
+
+.index-list li {
+  border-bottom: 1px #BBB solid;
+  padding: 4px 0 4px 0;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2em;
+}
+
+.index-description {
+  color: #777;
+  font-family: 'Open-Sans', sans-serif;
+}
