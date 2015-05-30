@@ -28,8 +28,11 @@
         </div>
 
         <div class="blurb">
-          What happened here?<br>Click a message on the map<br>
-           to find out... or <% if current_user && user_signed_in? %><%= link_to "write your own!", new_user_story_path(current_user.id) %><% else %><%= link_to "write your own!", new_user_registration_path %> <% end %><br>
+          Where are all the cool stories, bro?<br>
+          Explore the world's cool stories,<br> or
+          <% if current_user && user_signed_in? %><%= link_to "share your own!", new_user_story_path(current_user.id) %>
+          <% else %><%= link_to "write your own!", new_user_registration_path %>
+          <% end %><br>
         </div>
 
         <ul class="nav navbar-nav">
