@@ -12,12 +12,13 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name, "Story Name:" %><br>
-    <%= f.text_area :name, size: "60x1" %><br>
+    <%= f.label :name, "Story name:" %><br>
+    <%= f.text_area :name, size: "60x1", placeholder: "Cool Trip to Hawaii" %><br>
 
-    <%= f.label :description, "Story Summary:" %><br>
-    <%= f.text_area :description, size: "60x5" %>
+    <%= f.label :description, "Story summary:" %><br>
+    <%= f.text_area :description, size: "60x5", placeholder: "Last year I went to Hawaii, land of sharks and lava. It was the coolest vacation ever..." %>
   </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>
