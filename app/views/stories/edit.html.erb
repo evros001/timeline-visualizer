@@ -1,93 +1,111 @@
-<div class="row-container">
+<div id="content-container">  
+  <div class="edit_update_container_stories">
+    <div class="row-container">
 
-  <% if @story.locations.length <= 1 %>
-    <h2><span class="inactive-step">Step 1</span> &nbsp &nbsp <span class="inactive-step">Step 2</span> &nbsp &nbsp
-      <span class="active-step">Step 3</span></h2>
-  <% end %>
-
-  <h1>Story Dashboard</h1>
-
-  <%= link_to "View Story", user_story_path(@story.user_id, @story.id) %>
-
-  <div class="row">
-    <div class="col-sm-6 col-xs-12">
-        <%= form_for @story, url: user_story_path, remote: true do |f| %>
-          <% if @story.errors.any? %>
-            <div id="error_explanation">
-              <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
-
-              <ul>
-              <% @story.errors.full_messages.each do |message| %>
-                <li><%= message %></li>
-              <% end %>
-              </ul>
-            </div>
-          <% end %>
-
-        <div class="field">
-          <h2>Review Story Information</h2>
-          <%= f.label :name, "Story Name:" %><br>
-          <%= f.text_field :name, :size=>"50" %>
-        </div>
-          <div class="field">
-            <%= f.label :description, "Story Summary:" %><br>
-            <%= f.text_area :description, size:"50x5" %>
-          </div>
-          <div class="actions">
-            <%= f.submit "Update Name & Description" %>
-          </div>
-          <div id="notice-goes-here"></div>
-        <% end %>
-      </div>
-
-      <div class="col-sm-6 col-xs-12" id="new-location-form">
-      <h2>Add a location to this story</h2>
-      <%= form_for Location.new, url: user_story_locations_path(:user_id => @story.user_id, :story_id => @story.id), remote: true do |f| %>
-        <div class="field">
-          <%= f.label :name, "Location Name:" %><br>
-          <%= f.text_field :name, :size=>"50x1" %>
-        </div>
-        <div class="field">
-          <%= f.label :address, "Location Address:" %><br>
-          <%= f.text_area :address, :size=>"50x1" %>
-        </div>
-        <div class="field">
-          <%= f.label :description, "Tell us what happened at this location:" %><br>
-          <%= f.text_area :description, size: "50x5"  %>
-        </div>
-        <div class="actions">
-          <%= f.submit "Add New Location" %>
-        </div>
-        <div id="new-location-message"></div>
+      <% if @story.locations.length <= 1 %>
+        <h2><span class="inactive-step">Step 1</span> &nbsp &nbsp <span class="inactive-step">Step 2</span> &nbsp &nbsp
+          <span class="active-step">Step 3</span></h2>
       <% end %>
 
-<div class="line-break"></div>
-      </div>
-    </div>
-    <h2>Edit Story Locations</h2>
-    <div class="row">
-    <% @story.locations.each do |location| %>
-      <%= form_for location, url: user_story_location_path(:user_id => location.story.user_id, :story_id => location.story_id, :id => location.id), remote: true do |f| %>
+        <h1>Story Dashboard</h1>
+
+        <div id="link_to_view_story">
+          <%= link_to "View Story", user_story_path(@story.user_id, @story.id) %>
+        </div>
+
+      <div class="row">
+        <div id="review_story_info">
         <div class="col-sm-6 col-xs-12">
-          <div class="field">
-            <%= f.label :name, "Location Name:" %><br>
-            <%= f.text_field :name, :size=>"50x1" %>
+            <%= form_for @story, url: user_story_path, remote: true do |f| %>
+              <% if @story.errors.any? %>
+                <div id="error_explanation">
+                  <h2><%= pluralize(@story.errors.count, "error") %> prohibited this story from being saved:</h2>
+
+                  <ul>
+                  <% @story.errors.full_messages.each do |message| %>
+                    <li><%= message %></li>
+                  <% end %>
+                  </ul>
+                </div>
+              <% end %>
+
+          
+            <div class="field">
+                <h2>Review Story Information</h2>
+                <%= f.label :name, "Story Name:" %><br>
+                <%= f.text_field :name, :size=>"50" %>
+              </div>
+                <div class="field">
+                  <%= f.label :description, "Story Summary:" %><br>
+                  <%= f.text_area :description, size:"50x5" %>
+                </div>
+                <div class="actions">
+                  <%= f.submit "Update Name & Description" %>
+                </div>
+                <div id="notice-goes-here"></div>
+              <% end %>
+            </div>
           </div>
-          <div class="field">
+
+          <div class="col-sm-6 col-xs-12" id="new-location-form">
+          <h2>Add a location to this story</h2>
+          <%= form_for Location.new, url: user_story_locations_path(:user_id => @story.user_id, :story_id => @story.id), remote: true do |f| %>
+            <div class="field">
+              <%= f.label :name, "Location Name:" %><br>
+              <%= f.text_field :name, :size=>"50x1" %>
+            </div>
             <div class="field">
               <%= f.label :address, "Location Address:" %><br>
-              <%= f.text_field :address, :size=>"50x1" %>
+              <%= f.text_area :address, :size=>"50x1" %>
             </div>
-            <%= f.label :description, "What happened:"%><br>
-            <%= f.text_area :description, :size=>"50x5"  %>
-          </div>
-          <div class="actions">
-          <span class="update-<%=location.id%>"></span>
-            <%= f.submit "Update This Location" %>
+            <div class="field">
+              <%= f.label :description, "Tell us what happened at this location:" %><br>
+              <%= f.text_area :description, size: "50x5"  %>
+            </div>
+            <div class="actions">
+              <%= f.submit "Add New Location" %>
+            </div>
+            <div id="new-location-message"></div>
+          <% end %>
+
+    <div class="line-break"></div>
           </div>
         </div>
-      <% end %>
 
-    <% end %>
-    <div>
+        <div id="edit_location">
+          <h2>Edit Story Locations</h2>
+          <div class="row">
+          <% @story.locations.each do |location| %>
+            <%= form_for location, url: user_story_location_path(:user_id => location.story.user_id, :story_id => location.story_id, :id => location.id), remote: true do |f| %>
+              <div class="col-sm-6 col-xs-12 edit">
+                <div class="field">
+                  <%= f.label :name, "Location Name:" %><br>
+                  <%= f.text_field :name, :size=>"50x1" %>
+                </div>
+                <div class="field">
+                  <div class="field">
+                    <%= f.label :address, "Location Address:" %><br>
+                    <%= f.text_field :address, :size=>"50x1" %>
+                  </div>
+                  <%= f.label :description, "What happened:"%><br>
+                  <%= f.text_area :description, :size=>"50x5"  %>
+                </div>
+                <div class="actions">
+                <span class="update-<%=location.id%>"></span>
+                  <%= f.submit "Update This Location" %>
+                </div>
+              </div>
+            <% end %>
+
+          <% end %>
+          </div>
+        </div>
+
+    </div>
+  </div>
+
+  <div id="map-container" class="opacity">
+      <div id="map-canvas">
+      </div>
+  </div>
 </div>
