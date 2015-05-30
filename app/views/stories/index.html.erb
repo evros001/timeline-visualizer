@@ -1,15 +1,20 @@
 <div class="title-content">
+<h1>All the Stories:</h1>
 
-  <h1>All the Stories:</h1>
-  <ul>
-    <% @stories.each do |story| %>
-      <li><%= link_to story.name, user_story_path(story.user_id, story.id) %> - created by <%= story.user.name %><br>
-      <%= story.description %>
-      </li>
-    <% end %>
-  </ul>
-</div>
-
-  <% if user_signed_in? && current_user.id == @user.id %>
+<ul>
+  <% @stories.each do |story| %>
+    <li><%= link_to story.name, user_story_path(story.user_id, story.id) %> - created by <%= story.user.name %>
+    <% if user_signed_in? && current_user.id == story.user_id %>
+      <%= link_to 'Edit This Story', edit_user_story_path(story.user_id, story.id) %>
+    <% end %><br>
+    <%= story.description %>
+    
+    </li>
+  <% end %>
+</ul>
+ <% if user_signed_in? && current_user.id == @user.id %>
     <%= link_to "Create New Story", new_user_story_path(@user.id) %>
   <% end %>
+</div>
+
+ 
