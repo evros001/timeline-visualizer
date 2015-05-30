@@ -32,6 +32,7 @@ font-family: 'Roboto', sans-serif*/
 
 body {
   background-color: #fff;
+  margin-top: 0;
 }
 
 h1, h2 {
@@ -50,7 +51,14 @@ h3 {
   font-family: 'Nunito', sans-serif;
 }
 
+a {
+  color: #52dafb;
+}
 
+a:hover {
+  color: #fff;
+  text-decoration: none;
+}
 
 /*navbar*/
 
@@ -61,9 +69,6 @@ h3 {
   width: 20%;
   background-color: #000;
   z-index: 99;
-  border-left: #fff;
-  border-right: #fff;
-  border-bottom: #fff;
   font-family: 'Nunito', sans-serif;
 }
 
