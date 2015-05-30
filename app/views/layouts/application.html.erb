@@ -12,38 +12,39 @@
 </head>
 <body>
 
-
   <!-- NAVBAR -->
+  <center>
   <div id="nav-map-conatiner">
     <div id="nav-container">
       <nav role="navigation" class="navbar navbar-default">
-        <!-- Brand and toggle get grouped for better mobile display -->
+
+        <img id="logo-img" src="https://openmerchantaccount.com/img/quote_marker_logo.png">
+
         <div class="navbar-header">
-          <img id="logo_img" src="https://openmerchantaccount.com/img/quote_marker_logo.png">
-          <a href="<%= root_path %>" class="navbar-brand" class="hover">Cool Story, Bro</a>
+          <a href="<%= root_path %>" class="navbar-brand" class="hover">
+            <h1>Cool Story, Bro</h1>
+          </a>
         </div>
-        <!-- Collection of nav links and other content for toggling -->
-        <div id="navbarCollapse" class="collapse navbar-collapse">
-          <ul class="nav navbar-nav">
-            <li class="hover"><a href="<%= users_path %>">PEOPLE</a></li>
-            <li class="hover"><a href="/stories/index">STORIES</a></li>
-            <li class="hover"><a href="/about">ABOUT</a></li>
-              <% if user_signed_in? %>
-                <!-- Add a story -->
-                <!-- Go to User's home page -->
-              <% end %>
-            </ul>
-            <ul class="nav navbar-nav">
-              <% if user_signed_in? %>
-                <li class="hover"><%= link_to "SIGN OUT", destroy_user_session_path, method: :delete %></li>
-              <% else %>
-                <li class="hover"><%= link_to "SIGN IN", new_user_session_path %></li>
-                <li class="hover"><%= link_to "SIGN UP", new_user_registration_path %></li>
-             <% end %>
-           </ul>
+
+        <div class="blurb">
+          What happened here?<br>Click a message on the map<br>
+           to find out... or <% if current_user && user_signed_in? %><%= link_to "write your own!", new_user_story_path(current_user.id) %><% else %><%= link_to "write your own!", new_user_registration_path %> <% end %><br>
         </div>
+
+        <ul class="nav navbar-nav">
+          <li class="hover"><a href="<%= users_path %>">PEOPLE</a></li>
+          <li class="hover"><a href="/stories/index">STORIES</a></li>
+          <li class="hover"><a href="/about">ABOUT</a></li>
+            <% if user_signed_in? %>
+              <li class="hover"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
+            <% else %>
+              <li class="hover"><%= link_to "LOG IN", new_user_session_path %></li>
+              <li class="hover"><%= link_to "REGISTER", new_user_registration_path %></li>
+           <% end %>
+        </ul>
       </nav>
     </div>
+    </center>
 
     <!-- FLASH NOTICES -->
     <% if flash[:error] -%>
@@ -54,6 +55,7 @@
       <p class='alert'><%=h flash[:alert] %></p>
     <% else %>
     <% end -%>
+
 
       <%= yield %>
   </div>
