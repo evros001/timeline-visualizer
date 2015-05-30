@@ -1,39 +1,30 @@
-# Timeline Visualizer
+# Cool Story, Bro
 
 ## Description
 
-Add a short description of your app.
-
-## Screenshots
-
-Add some spiffy screenshots of your app here.
+An interactive story visualizer where you can read, create, and explore cool stories.
 
 ## Background
 
-Why did you want to make this app? What was your development process
-like?
-
-## Features
-
-Bullet point some of the key features of your app here.
+Cool Story, Bro is a Ruby/Rails and Javascript application that makes use of the Google Maps API. It was made at the Flatiron School by students Adam Czerepinski, Stefania Sicurelli, and Evan Rosse.
 
 ## Usage
 
-How do users use your app?
+Users can explore maps that are populated with stories by other users. The stories appear as icons on the map, and contain the location(s) and description of what happened in the story. Users can create an account to save and share their own stories.
 
 ## Development/Contribution
 
-Explain how people can contribute to your app. How should they write tests?
-Any things in particular you'd like to see in pull requests?
+This is a student portfolio project, so the original authors will be the only ones making updates for the time being. However, we welcome feedback! See contact info below.
 
 ## Future
 
-What features are you currently working on? Only mention things that you
-actually are implementing. No pie-in-the-sky-never-gonna-happen stuff.
+Add the option for users to upload an image to their story or to each location of the story.
 
-## Author
+## Authors
 
-Link to your blog, twitter, etc!
+Adam Czerepinski – http://www.adamcz.com – aczerepinski@gmail.com
+Stefania Sicurelli – http://www.stefsic.com – stef@stefsic.com
+Evan Rosse – https://github.com/evros001 – evanrosse@gmail.com
 
 ## License
 
