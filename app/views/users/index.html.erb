@@ -6,6 +6,6 @@
       <% if user_signed_in? && current_user.id == user.id %>
         <%= link_to "Add Story", new_user_story_path(user.id) %> |
       <% end %>
-      <%= link_to "View User's Home Page", user_path(user.id) %><br><br></li>
+      <%= link_to "View Home Page", user_path(user.id) %><br><br></li>
   <% end %>
 </ul>
