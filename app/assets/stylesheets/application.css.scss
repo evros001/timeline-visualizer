@@ -268,13 +268,14 @@ a:hover {
 
 .about-container {
   display: block;
-  text-align: center;
+  text-align: left;
   margin-right: 50px;
 }
 
 .about-block {
   display: inline-block;
   padding: 50px;
+  text-align: center;
 }
 
 .icons-block {
@@ -387,4 +388,12 @@ h3, .h3 {
 
 .field h2, #new-location-form h2, #edit_location h2{
   padding: 10px;
+}
+
+.about-image {
+  background-color: #AAA;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 20px;
+
 }
