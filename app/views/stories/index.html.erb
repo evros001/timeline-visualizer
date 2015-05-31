@@ -1,20 +1,24 @@
 <div class="users_index">
-<h1>Explore Cool Stories</h1>
+  <h1>Explore Cool Stories</h1>
 
-<ul class="index-list">
-  <% @stories.each do |story| %>
-    <li><span class="index-name"><%= story.name.upcase %></span> - <span class="index-description">by</span> <strong><%= story.user.name %></strong> 
-    <% if user_signed_in? && current_user.id == story.user_id %>
-      <%= link_to 'Edit Story', edit_user_story_path(story.user_id, story.id) %>
-    <% end %><br>
-    <span class="index-description"><%= story.description %></span><br>
-    <%= link_to 'View Story', user_story_path(story.user_id, story.id) %>
+  <ul class="index-list">
+    <% @stories.each do |story| %>
+      <li><span class="index-name"><%= story.name.upcase %></span> - <span class="index-description">
+        by</span> <strong><%= story.user.name %></strong>
+      <span class="index-description">
+        <br>Summary: <%= story.description %></span><br>
+        <% if user_signed_in? && current_user.id == story.user_id %>
+          <%= link_to 'Edit Story', edit_user_story_path(story.user_id, story.id) %>
+        <% end %> |
+      <%= link_to 'View Story', user_story_path(story.user_id, story.id) %>
+      </li>
+    <% end %>
+  </ul>
 
-    </li>
-  <% end %>
-</ul>
- <% if user_signed_in? && current_user.id == @user.id %>
-    <%= link_to "Create New Story", new_user_story_path(@user.id) %>
-  <% end %>
+  <div id="create-story-link">
+    <% if user_signed_in? && current_user.id == @user.id %>
+      <%= link_to "Create New Story", new_user_story_path(@user.id) %>
+    <% end %>
+  </div>
+
 </div>
-

@@ -1,10 +1,12 @@
-<div id="content-container">  
+<div id="content-container">
   <div class="edit_update_container_stories">
     <div class="row-container">
 
       <% if @story.locations.length <= 1 %>
-        <h2><span class="inactive-step">Step 1</span> &nbsp &nbsp <span class="inactive-step">Step 2</span> &nbsp &nbsp
+        <br><div class="story-steps">
+          <h2><span class="inactive-step">Step 1</span> &nbsp &nbsp <span class="inactive-step">Step 2</span> &nbsp &nbsp
           <span class="active-step">Step 3</span></h2>
+        </div>
       <% end %>
 
         <h1>Story Dashboard</h1>
@@ -29,7 +31,7 @@
                 </div>
               <% end %>
 
-          
+
             <div class="field">
                 <h2>Review Story Information</h2>
                 <%= f.label :name, "Story Name:" %><br>
@@ -48,7 +50,7 @@
           </div>
 
           <div class="col-sm-6 col-xs-12" id="new-location-form">
-          <h2>Add a location to this story</h2>
+          <h2>Add a Location</h2>
           <%= form_for Location.new, url: user_story_locations_path(:user_id => @story.user_id, :story_id => @story.id), remote: true do |f| %>
             <div class="field">
               <%= f.label :name, "Location Name:" %><br>
