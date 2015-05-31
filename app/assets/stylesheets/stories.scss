@@ -1,5 +1,10 @@
+.index{
+  margin-left: 10px;  
+}
+
 .index-list {
  list-style-type: none;
+ padding: 0px;
 }
 
 .index-list li {
@@ -11,5 +16,14 @@
 
 .index-description {
   color: #777;
-  font-family: 'Open-Sans', sans-serif;
+  font-family: 'Nunito', sans-serif;
+}
+
+.users_index {
+  margin: 0px 2% 0px 22%;
+  padding-top: 10px;
+}
+
+.users_index h1{
+  margin: 10px 0px 10px 0px 
 }

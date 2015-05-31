@@ -1,10 +1,25 @@
-<div class="nav-text" id="text"><br><br><br><br><br><br>
-  <%= @user.name.capitalize %>'s Story:<br> <%= @story.name %>
-  <% if user_signed_in? && current_user.id == @user.id %>
-    <%= link_to 'Edit', edit_user_story_path(@user.id, @story.id) %> |
-    <%= link_to "Delete", user_story_path(@user.id, @story.id), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
-  <% end %>
+<div class="show-story hidden">
+  <div class="btn btn-custom" role="button">SHOW STORY INFO
+  </div>
 </div>
+
+<div class="story-title">
+  <h1 class="btn-wrapper"><%= @story.name %></h1>
+    <p class="btn-wrapper"><strong>by: <%= @story.user.name %></strong><br></p>
+
+      <p><%= @story.description %></p>
+      
+      <p><% if user_signed_in? && current_user.id == @user.id %>
+        <%= link_to 'Edit', edit_user_story_path(@user.id, @story.id) %> |
+        <%= link_to "Delete", user_story_path(@user.id, @story.id), method: :delete, data: { confirm: 'Are you sure you want to delete this?' } %>
+      <% end %>
+    </p>
+
+  <div class="btn-wrapper">
+    <div class="btn btn-custom" role="button" id="hide-story">HIDE STORY INFO</div>
+  </div>
+</div>
+
 <div id="map-container">
   <div id="map-canvas"></div>
 </div>

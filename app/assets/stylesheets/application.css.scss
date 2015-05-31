@@ -56,8 +56,8 @@ a {
 }
 
 a:hover {
-  color: #fff;
-  text-decoration: none;
+  text-decoration: underline;
+  color: #52dafb;
 }
 
 /*navbar*/
@@ -134,6 +134,59 @@ a:hover {
   padding: 20px;
   background-color: #fff;
   border: 2px solid #000;
+}
+
+.story-title{
+  position: absolute;
+  z-index: 100;
+  padding: 20px;
+  color: #000;
+  margin-left: 24vw;
+  margin-top: 7vh;
+  background-color: #fff;
+  border: 2px solid #888;
+  opacity: .9;
+  max-width: 500px;
+}
+
+.show-story {
+  position: absolute;
+  z-index: 100;
+  padding: 5px;
+  color: #52dafb;
+  margin-left: 24vw;
+  margin-top: 7vh;
+  /*background-color: #000;*/
+  opacity: .7;
+  max-width: 500px;
+  font-family: Nunito;
+}
+
+.story-title p {
+  margin-top: 10px;
+  font-size: 1em;
+  font-family: Nunito;
+}
+
+.hidden {
+  display: none;
+}
+
+.btn-custom {
+  background-color: #000;
+  margin: auto;
+  color: #52dafb;
+  font-family: Nunito; 
+}
+
+.btn-wrapper {
+  width: 100%;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.btn:hover {
+  color: #fff;
 }
 
 .navbar-brand {
@@ -215,13 +268,14 @@ a:hover {
 
 .about-container {
   display: block;
-  text-align: center;
+  text-align: left;
   margin-right: 50px;
 }
 
 .about-block {
   display: inline-block;
   padding: 50px;
+  text-align: center;
 }
 
 .icons-block {
@@ -334,4 +388,12 @@ h3, .h3 {
 
 .field h2, #new-location-form h2, #edit_location h2{
   padding: 10px;
+}
+
+.about-image {
+  background-color: #AAA;
+  width: 200px;
+  height: 250px;
+  margin-bottom: 20px;
+
 }
