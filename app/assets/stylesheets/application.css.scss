@@ -147,19 +147,29 @@ a:hover {
   border: 2px solid #888;
   opacity: .9;
   max-width: 500px;
-  /*text-shadow: 5px 5px 5px #000, */
 }
 
 .show-story {
   position: absolute;
   z-index: 100;
+  padding: 5px;
+  color: #52dafb;
+  margin-left: 24vw;
+  margin-top: 7vh;
+  /*background-color: #000;*/
+  opacity: .7;
+  max-width: 500px;
+  font-family: Nunito;
 }
 
 .story-title p {
   margin-top: 10px;
   font-size: 1em;
   font-family: Nunito;
-  /*text-align: center;*/
+}
+
+.hidden {
+  display: none;
 }
 
 .btn-custom {
