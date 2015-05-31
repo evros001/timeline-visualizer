@@ -6,8 +6,7 @@
   <%= stylesheet_link_tag    'application', media: 'all' %>
   <%= javascript_include_tag 'application' %>
   <script src="https://maps.googleapis.com/maps/api/js"></script>
-  <link href='https://fonts.googleapis.com/css?family=Roboto:900,400italic,100italic,400' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Alfa+Slab+One|Cabin+Condensed|Lobster|Nunito|Yanone+Kaffeesatz' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Lobster|Nunito' rel='stylesheet' type='text/css'>
   <%= csrf_meta_tags %>
   <%= analytics_init if Rails.env.production? %>
 </head>
@@ -38,6 +37,9 @@
         <ul class="nav navbar-nav">
           <li class="hover"><a href="<%= users_path %>">PEOPLE</a></li>
           <li class="hover"><a href="/stories/index">STORIES</a></li>
+          <% if user_signed_in? %>
+          <li class="hover"><%= link_to "DASHBOARD", user_path(current_user.id) %></li>
+          <% end %>
           <li class="hover"><a href="/about">ABOUT</a></li>
             <% if user_signed_in? %>
               <li class="hover"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
