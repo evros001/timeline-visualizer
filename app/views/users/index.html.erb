@@ -3,17 +3,23 @@
 
   <ul class="index-list">
     <% @users.each do |user| %>
-      <li><%= user.name.upcase %><br> 
+
+      <li><%= user.name.upcase %><br>
+
       <span class="index-description">
-      <% if user.locations.first %>
-        Sample Location: <%=user.locations.first.name %> - <%=user.locations.first.description %><br></span>
-      <% else %>
-        This user has no locations. Weird.<br></span>
-      <% end %>  
-        <% if !user_signed_in? || current_user.id != user.id %>
-          <%= link_to "Add Story", new_user_story_path(user.id) %>
+        <% if user.locations.first %>
+          Sample Location: <%=user.locations.first.name %> - <%=user.locations.first.description %><br>
+      </span>
+        <% else %>
+          This user has no locations. Weird.<br></span>
         <% end %>
-        <%= link_to "View #{user.name.capitalize}'s Stories", user_path(user.id) %></li>
+
+        <% if user_signed_in? %>
+          <%= link_to "View #{user.name.capitalize}'s Stories", user_path(user.id) %>
+        <% else %>
+          <%= link_to "Log in", new_user_session_path %> to view #{user.name.capitalize}'s stories.
+        <% end %>
+        </li>
     <% end %>
   </ul>
 </div>
