@@ -18,38 +18,42 @@
     <div id="nav-container">
       <nav role="navigation" class="navbar navbar-default">
 
-        <img id="logo-img" src="https://openmerchantaccount.com/img/quote_marker_logo.png">
+        <a href="/"><img id="logo-img" src="https://openmerchantaccount.com/img/quote_marker_logo.png"></a>
 
-        <div class="navbar-header">
-          <a href="<%= root_path %>" class="navbar-brand" class="hover">
-            <h1>Cool Story, Bro</h1>
-          </a>
-        </div>
+          <div class="navbar-header">
+            <div class="navbar-brand">
+              <h1>Cool Story, Bro</h1>
+            </div>
+          </div>
 
-        <div class="blurb">
-          Where are all the cool stories, bro? 
-          Explore the world's cool stories, or
-          <% if current_user && user_signed_in? %><%= link_to "share your own!", new_user_story_path(current_user.id) %>
-          <% else %><%= link_to "write your own!", new_user_registration_path %>
-          <% end %><br>
-        </div>
+          <div class="blurb">
+            Where are all the cool stories, bro?
+            Explore the world's cool stories, or
+            <% if current_user && user_signed_in? %><%= link_to "share your own!", new_user_story_path(current_user.id) %>
+            <% else %><%= link_to "write your own!", new_user_registration_path %>
+            <% end %><br>
+          </div>
 
-        <ul class="nav navbar-nav">
-          <li class="hover"><a href="<%= users_path %>">PEOPLE</a></li>
-          <li class="hover"><a href="/stories/index">STORIES</a></li>
-          <% if user_signed_in? %>
-          <li class="hover"><%= link_to "DASHBOARD", user_path(current_user.id) %></li>
-          <% end %>
-          <li class="hover"><a href="/about">ABOUT</a></li>
+          <ul class="nav navbar-nav">
+            <li class="hover"><a href="<%= users_path %>">PEOPLE</a></li>
+            <li class="hover"><a href="/stories/index">STORIES</a></li>
             <% if user_signed_in? %>
-              <li class="hover"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
-            <% else %>
-              <li class="hover"><%= link_to "LOG IN", new_user_session_path %></li>
-              <li class="hover"><%= link_to "REGISTER", new_user_registration_path %></li>
-           <% end %>
-        </ul>
+            <li class="hover"><%= link_to "DASHBOARD", user_path(current_user.id) %></li>
+            <% end %>
+            <li class="hover"><a href="/about">ABOUT</a></li>
+              <% if user_signed_in? %>
+                <li class="hover"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
+              <% else %>
+                <li class="hover"><%= link_to "LOG IN", new_user_session_path %></li>
+                <li class="hover"><%= link_to "REGISTER", new_user_registration_path %></li>
+             <% end %>
+          </ul>
       </nav>
+    <div class="bottom-nav">
+      Content © 2015 <br> Adam Czerepinski, Stefania Sicurelli & Evan Rosse
     </div>
+    </div>
+
     </center>
 
     <!-- FLASH NOTICES -->
@@ -62,8 +66,8 @@
     <% else %>
     <% end -%>
 
+    <%= yield %>
 
-      <%= yield %>
   </div>
 </body>
 </html>
