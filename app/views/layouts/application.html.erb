@@ -27,7 +27,7 @@
         </div>
 
         <div class="blurb">
-          Where are all the cool stories, bro? 
+          Where are all the cool stories, bro?
           Explore the world's cool stories, or
           <% if current_user && user_signed_in? %><%= link_to "share your own!", new_user_story_path(current_user.id) %>
           <% else %><%= link_to "write your own!", new_user_registration_path %>
@@ -49,7 +49,11 @@
            <% end %>
         </ul>
       </nav>
+      <div class="bottom-nav">
+        Content © 2015 <br> Adam Czerepinski, Stefania Sicurelli & Evan Rosse
+      </div>
     </div>
+
     </center>
 
     <!-- FLASH NOTICES -->
