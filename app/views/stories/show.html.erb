@@ -9,12 +9,12 @@
 
       <p><%= @story.description %></p>
 
-      <p>Locations:
+      <!-- <p>Locations:
       <% @story.locations.each do |location| %>
-      <ul>
+      <ul class="list-style">
         <li><%= location.name %></li>
       </ul>
-      <% end %></p>
+      <% end %></p> -->
 
       <p><% if user_signed_in? && current_user.id == @user.id %>
         <%= link_to 'Edit', edit_user_story_path(@user.id, @story.id) %> |

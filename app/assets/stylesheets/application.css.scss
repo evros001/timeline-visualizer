@@ -326,6 +326,16 @@ h3, .h3 {
   margin-left: 20px;
 }
 
+.list-style {
+  display: inline;
+  list-style-type: disc;
+}
+
+.list-style li {
+  display: inline;
+  list-style-type: disc;
+}
+
 /*edit update boxes over map*/
 .edit_update_container {
   position: absolute;

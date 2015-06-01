@@ -7,18 +7,14 @@
       <li><%= user.name.upcase %><br>
 
       <span class="index-description">
-        <% if user.locations.first %>
-          Location: <%= user.locations.first.name %> - <%=user.locations.first.description %><br>
+        <% if user.stories.first %>
+          Sample Story: <%= user.stories.first.name %> - <%=user.stories.first.description %><br>
       </span>
         <% else %>
-          This user has no locations. Weird.<br></span>
-        <% end %>
 
-        <% if user_signed_in? %>
-          <%= link_to "View #{user.name.capitalize}'s Stories", user_path(user.id) %>
-        <% else %>
-          <%= link_to "Log in", new_user_session_path %> to view <%= user.name.capitalize %>'s stories.
+          This user has no stories. Weird.<br></span>
         <% end %>
+          <%= link_to "View all of #{user.name.capitalize}'s Stories", user_path(user.id) %>
         </li>
     <% end %>
   </ul>

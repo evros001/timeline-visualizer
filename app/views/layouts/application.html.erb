@@ -28,20 +28,20 @@
 
           <div class="blurb">
             Where are all the cool stories, bro?
-            Explore the world's cool stories, or
-            <% if current_user && user_signed_in? %><%= link_to "share your own!", new_user_story_path(current_user.id) %>
-            <% else %><%= link_to "write your own!", new_user_registration_path %>
-            <% end %><br>
+            Explore the world's cool stories, or share your own!
+            <br>
           </div>
 
           <ul class="nav navbar-nav">
             <li class="hover"><a href="<%= users_path %>">PEOPLE</a></li>
             <li class="hover"><a href="/stories/index">STORIES</a></li>
             <% if user_signed_in? %>
+            <li class="hover"><%= link_to "ADD STORY", new_user_story_path(current_user.id) %></li>
+
             <li class="hover"><%= link_to "DASHBOARD", user_path(current_user.id) %></li>
-            <% end %>
+
             <li class="hover"><a href="/about">ABOUT</a></li>
-              <% if user_signed_in? %>
+            
                 <li class="hover"><%= link_to "LOG OUT", destroy_user_session_path, method: :delete %></li>
               <% else %>
                 <li class="hover"><%= link_to "LOG IN", new_user_session_path %></li>

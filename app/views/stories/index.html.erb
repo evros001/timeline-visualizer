@@ -8,8 +8,8 @@
       <span class="index-description">
         <br>Summary: <%= story.description %></span><br>
         <% if user_signed_in? && current_user.id == story.user_id %>
-          <%= link_to 'Edit Story', edit_user_story_path(story.user_id, story.id) %>
-        <% end %> |
+          <%= link_to 'Edit Story', edit_user_story_path(story.user_id, story.id) %> |
+        <% end %>
       <%= link_to 'View Story', user_story_path(story.user_id, story.id) %>
       </li>
     <% end %>
