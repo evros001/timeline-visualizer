@@ -6,6 +6,8 @@ class User < ActiveRecord::Base
   has_many :stories
   has_many :locations, through: :stories
 
+  validates :name, uniqueness: true
+
   def markers
     arr = Array.new
     locations.each do |location|
