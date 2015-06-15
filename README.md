@@ -3,6 +3,7 @@
 ## Description
 
 An interactive story visualizer where you can read, create, and explore cool stories.
+![screenshot](http://www.adamcz.com/images/cool_story_1000.jpg)
 
 ## Background
 
